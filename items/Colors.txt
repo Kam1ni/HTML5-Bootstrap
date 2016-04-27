@@ -1,0 +1,6 @@
+blue header, menubalken: #2196F3
+invulling pagina bleu: #E3F2FD
+bruin: F4A55E
+donker bruin:C04307 
+
+
