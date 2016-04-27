@@ -3,4 +3,34 @@ $blauw: #2196F3;
 header{
     background-color: $blauw;
     color: white;
+    
+    ul{
+        height: 100%;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding: 0px;
+    }
+    
+    *{
+        background-color: $blauw;
+        color: white;
+        .btn:hover{
+            background-color: darken($blauw, 30%);
+            *{
+                background-color: darken($blauw, 30%);
+                color: white;
+            }
+        }
+    }
+    
+    .btn{
+        height: 100%;
+    }
+    
+    .logo{
+        background-color: white;
+        *{
+            background-color: white;            
+        }       
+    }
 }
