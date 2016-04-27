@@ -1,0 +1,17 @@
+$blauw: #2196F3;
+
+header{
+    background-color: $blauw;
+    color: white;
+    
+    a{
+        color: white;
+        background-color: darken($blauw, 20%);
+    }
+    
+    nav{
+        li{
+            display: inline;
+        }
+    }
+}
