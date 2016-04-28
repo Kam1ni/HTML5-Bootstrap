@@ -1,40 +1,40 @@
-/* line 3, ../sass/style.scss */
 header {
   background-color: #2196F3;
   color: white;
 }
-/* line 7, ../sass/style.scss */
 header ul {
   height: 100%;
   margin-bottom: 0px;
   margin-top: 0px;
   padding: 0px;
 }
-/* line 14, ../sass/style.scss */
 header * {
   background-color: #2196F3;
   color: white;
 }
-/* line 17, ../sass/style.scss */
 header * .btn:hover {
   background-color: #064475;
 }
-/* line 19, ../sass/style.scss */
 header * .btn:hover * {
   background-color: #064475;
   color: white;
 }
-/* line 26, ../sass/style.scss */
 header .btn {
   height: 100%;
 }
-/* line 30, ../sass/style.scss */
 header .logo {
   background-color: white;
 }
-/* line 32, ../sass/style.scss */
 header .logo * {
   background-color: white;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 60px;
+  background-color: #E3F2FD;
 }
 
 /*# sourceMappingURL=style.css.map */
