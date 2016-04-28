@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+.navbar {
+  border-radius: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.navbar .container {
+  height: 100%;
+}
+.navbar .container * {
+  color: lightgray;
+  height: 100%;
+}
+.navbar a {
+  margin-left: 0px !important;
+  padding: 10px;
+}
+.navbar a:hover {
+  color: white;
+  text-decoration: none;
+  background-color: gray;
+}
+=======
 header {
   background-color: #2196F3;
   color: white;
@@ -38,3 +61,4 @@ footer {
 }
 
 /*# sourceMappingURL=style.css.map */
+>>>>>>> refs/remotes/origin/master

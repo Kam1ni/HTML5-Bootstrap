@@ -1,38 +1,27 @@
 $blauw: #2196F3;
 $lichtblauw:#E3F2FD;
 
-header{
-    background-color: $blauw;
-    color: white;
-    
-    ul{
+
+.navbar{
+    border-radius: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    .container{
         height: 100%;
-        margin-bottom: 0px;
-        margin-top: 0px;
-        padding: 0px;
-    }
-    
-    *{
-        background-color: $blauw;
-        color: white;
-        .btn:hover{
-            background-color: darken($blauw, 30%);
-            *{
-                background-color: darken($blauw, 30%);
-                color: white;
-            }
+        *{
+            color:lightgray;
+            height: 100%;
         }
     }
     
-    .btn{
-        height: 100%;
+    a{
+        margin-left: 0px !important;
+        padding: 10px;
     }
-    
-    .logo{
-        background-color: white;
-        *{
-            background-color: white;            
-        }       
+    a:hover{
+        color:white;
+        text-decoration: none;
+        background-color: gray;
     }
 }
 
