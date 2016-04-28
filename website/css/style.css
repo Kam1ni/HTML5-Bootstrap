@@ -1,64 +1,53 @@
-<<<<<<< HEAD
+/* line 4, ../sass/style.scss */
+body {
+  padding: 0px;
+}
+
+/* line 8, ../sass/style.scss */
 .navbar {
   border-radius: 0px;
   padding-top: 0px;
   padding-bottom: 0px;
+  height: 50px;
 }
-.navbar .container {
-  height: 100%;
-}
-.navbar .container * {
+/* line 13, ../sass/style.scss */
+.navbar * {
   color: lightgray;
   height: 100%;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
 }
+/* line 21, ../sass/style.scss */
 .navbar a {
   margin-left: 0px !important;
-  padding: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  vertical-align: middle;
+  line-height: 50px;
 }
+/* line 29, ../sass/style.scss */
 .navbar a:hover {
   color: white;
   text-decoration: none;
   background-color: gray;
 }
-=======
-header {
-  background-color: #2196F3;
-  color: white;
-}
-header ul {
-  height: 100%;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  padding: 0px;
-}
-header * {
-  background-color: #2196F3;
-  color: white;
-}
-header * .btn:hover {
-  background-color: #064475;
-}
-header * .btn:hover * {
-  background-color: #064475;
-  color: white;
-}
-header .btn {
-  height: 100%;
-}
-header .logo {
-  background-color: white;
-}
-header .logo * {
-  background-color: white;
+/* line 35, ../sass/style.scss */
+.navbar + * {
+  margin-top: 50px !important;
 }
 
+/* line 40, ../sass/style.scss */
+.content {
+  margin-bottom: 50px;
+}
+
+/* line 44, ../sass/style.scss */
 footer {
-  position: absolute;
+  position: fixed !important;
   bottom: 0px;
   width: 100%;
-  height: 60px;
+  height: 50px;
   background-color: #E3F2FD;
 }
 
 /*# sourceMappingURL=style.css.map */
->>>>>>> refs/remotes/origin/master
