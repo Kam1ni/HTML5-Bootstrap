@@ -1,0 +1,4 @@
+Options All -indexes
+
+Errordocument 403 /error/error403.htm
+Errordocument 404 /error/error404.htm
