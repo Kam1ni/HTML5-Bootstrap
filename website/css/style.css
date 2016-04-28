@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .navbar {
   border-radius: 0px;
   padding-top: 0px;
@@ -19,3 +20,45 @@
   text-decoration: none;
   background-color: gray;
 }
+=======
+header {
+  background-color: #2196F3;
+  color: white;
+}
+header ul {
+  height: 100%;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding: 0px;
+}
+header * {
+  background-color: #2196F3;
+  color: white;
+}
+header * .btn:hover {
+  background-color: #064475;
+}
+header * .btn:hover * {
+  background-color: #064475;
+  color: white;
+}
+header .btn {
+  height: 100%;
+}
+header .logo {
+  background-color: white;
+}
+header .logo * {
+  background-color: white;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 60px;
+  background-color: #E3F2FD;
+}
+
+/*# sourceMappingURL=style.css.map */
+>>>>>>> refs/remotes/origin/master
