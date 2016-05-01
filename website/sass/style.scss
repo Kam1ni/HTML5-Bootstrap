@@ -1,6 +1,7 @@
 $blauw: #2196F3;
 $lichtblauw:#E3F2FD;
 
+
 body{
     padding: 0px;
 }
@@ -48,3 +49,71 @@ footer {
     height: 50px;
     background-color: $lichtblauw;
 }
+
+
+//laura
+
+@media (min-width: 0px) {
+    .container {
+        margin: 0px;
+        padding: 0px;
+        max-width: 544px;
+        text-align: center;
+        padding-bottom: 50px;
+        
+        
+        h1{
+            font-size: 55px;
+             padding: 20px;
+        }
+        h2{
+            padding: 20px 0px;
+        }
+        .kop {
+            background: $blauw;
+            padding: 30px 15px;
+        }
+        .tekst{
+            padding: 0px 20px 10px 20px;
+        }
+        .instaleren{
+           
+        }
+        .backup{
+            background-color: $lichtblauw
+        }
+        .Defragmenteren{
+            
+        }
+       
+        
+    }
+}
+
+@media (min-width: 544px){
+    .container{
+        margin: 0px;
+        padding: 0px;
+        max-width: 768px;
+        text-align: center;
+        
+        .kop {
+            padding-top: 35px;
+            padding-bottom: 35px;
+            
+            h1{
+                padding: 30px;
+                font-size: 60px;
+            }
+            p{
+                padding: 0px 50px;
+               
+            }
+    
+        }
+    }
+        
+}
+
+
+
