@@ -9,19 +9,44 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap-4.0.0-alpha.2/dist/css/bootstrap.min.css">
     
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="css/style.css">
+    
+    <script src="http://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(
+        function(){
+            $("#nav-btn").click(
+            function(){
+                if ($("#nav-main").hasClass("hidden")){
+                    $("#nav-main").removeClass("hidden").addClass("shown");
+                }
+                else if ($("#nav-main").hasClass("shown")){
+                    $("#nav-main").removeClass("shown").addClass("hidden");
+                }
+                });
+        })
+    </script>
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
+   <nav class="nav-button nav nav-bar navbar-fixed-top contianer">
+       <i class="fa fa-bars btn fa-3x" id="nav-btn"></i>
+   </nav>
+    <nav class="navbar navbar-dark bg-inverse navbar-fixed-top hidden" id="nav-main">
      <div class="container">
       <div class="nav navbar-nav">
-           <a class="nav-item nav-link nav-brand active" href=""><img src="img/logo-wit.png" alt="logo naar home" height="20px"/></a>
-            <a class="nav-item nav-link" href="">lid 1 pagina 1</a>
-            <a class="nav-item nav-link" href="">lid 1 pagina 2</a>
-            <a class="nav-item nav-link" href="">lid 2 pagina 1</a>
-            <a class="nav-item nav-link" href="">lid 2 pagina 2</a>
-            <a class="nav-item nav-link" href="">lid 3 pagina 1</a>
-            <a class="nav-item nav-link" href="">lid 3 pagina 2</a>
+          <ul>
+           <li><a class="nav-item nav-link nav-brand active" href=""><img src="img/logo-wit.png" alt="logo naar home" height="20px"/></a></li>
+            <li><a class="nav-item nav-link" href="">lid 1 pagina 1</a></li>
+            <li><a class="nav-item nav-link" href="">lid 1 pagina 2</a></li>
+            <li><a class="nav-item nav-link" href="">lid 2 pagina 1</a></li>
+            <li><a class="nav-item nav-link" href="">lid 2 pagina 2</a></li>
+            <li><a class="nav-item nav-link" href="">lid 3 pagina 1</a></li>
+            <li><a class="nav-item nav-link" href="">lid 3 pagina 2</a></li>
+           </ul>
         </div>
      </div>
     </nav>
