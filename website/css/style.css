@@ -1,87 +1,49 @@
 /*
-body{
-    padding: 0px;
-}
+Error: Invalid CSS after ">>>>>>> master": expected "{", was "}"
+        on line 64 of C:\Users\kamil\Documents\GitHub\HTML5-Bootstrap\website\sass\style.scss
 
-.navbar{
-    border-radius: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    height: 50px;
-    *{
-        color:lightgray;
-        height: 100%;
-        padding-top: 0px !important;
-        padding-bottom: 0px !important;
-    }
-    
-    ul {
-        padding-left: 0px;
-        
-        li{
-            display: inline;
-        }
-    }
-    
-    a{
-        margin-left: 0px !important;
-        padding-right: 10px;
-        padding-left: 10px;
-        vertical-align: middle;
-        line-height: 50px;
-    }
-    
-    a:hover{
-        color:white !important;
-        text-decoration: none;
-        background-color: rgba(0,0,0, 0.9)
-    }
-    
-    & + *{
-        margin-top: 50px !important;
-    }
-}
+59: .content{
+60: =======
+61: .content {
+62:     margin-bottom: 50px;
+63: >>>>>>> master
+64: }
+65: footer {
+66: <<<<<<< HEAD
+67: =======
+68:     position: fixed!important;
+69:     bottom: 0px;
+
+Backtrace:
+C:\Users\kamil\Documents\GitHub\HTML5-Bootstrap\website\sass\style.scss:64
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1165:in `expected'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1101:in `expected'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1096:in `tok!'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:641:in `block'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:711:in `declaration_or_ruleset'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:661:in `block_child'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:653:in `block_contents'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:642:in `block'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:711:in `declaration_or_ruleset'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:661:in `block_child'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:650:in `block_contents'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:642:in `block'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:635:in `ruleset'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:660:in `block_child'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:653:in `block_contents'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:117:in `stylesheet'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:42:in `parse'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:393:in `_to_tree'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:268:in `render'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:404:in `run'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files/Koala/rubygems/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
+C:/Program Files/Koala/bin/sass:18:in `load'
+C:/Program Files/Koala/bin/sass:18:in `<main>'
 */
-footer {
-  width: 100%;
-  height: 50px;
-  background-color: #E3F2FD;
-}
-
-@media screen and (max-device-width: 480px) {
-  .navbar {
-    width: 180px;
-    height: 100%;
-  }
-  .navbar * {
-    padding: auto;
-    padding-left: 5px;
-  }
-  .navbar .nav-brand img {
-    height: 50px;
-  }
-  .navbar ul li {
-    display: table;
-    list-style: none;
-  }
-
-  .hidden {
-    position: absolute;
-    left: -180px;
-  }
-
-  .nav-button {
-    height: 70px;
-    text-align: right;
-    vertical-align: middle;
-    background-color: #2196F3;
-    color: white;
-    padding-right: 20px;
-  }
-  .nav-button * {
-    background-color: rgba(0, 0, 0, 0.4);
-    margin-top: 5px;
-    text-align: center;
-    vertical-align: middle;
-  }
-}
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \">>>>>>> master\": expected \"{\", was \"}\"\A         on line 64 of C:\Users\kamil\Documents\GitHub\HTML5-Bootstrap\website\sass\style.scss\A \A 59: .content{\A 60: =======\A 61: .content {\A 62:     margin-bottom: 50px;\A 63: >>>>>>> master\A 64: }\A 65: footer {\A 66: <<<<<<< HEAD\A 67: =======\A 68:     position: fixed!important;\A 69:     bottom: 0px;"; }
