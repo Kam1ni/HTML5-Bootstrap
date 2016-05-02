@@ -1,119 +1,150 @@
 $blauw: #2196F3;
 $lichtblauw:#E3F2FD;
-
-
-body{
+body {
     padding: 0px;
 }
-
-.navbar{
+.navbar {
     border-radius: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
     height: 50px;
-    *{
-        color:lightgray;
+    * {
+        color: lightgray;
         height: 100%;
         padding-top: 0px !important;
         padding-bottom: 0px !important;
     }
-
-    
-    a{
+    a {
         margin-left: 0px !important;
         padding-right: 10px;
         padding-left: 10px;
         vertical-align: middle;
         line-height: 50px;
     }
-    
-    a:hover{
-        color:white;
+    a:hover {
+        color: white;
         text-decoration: none;
         background-color: gray;
     }
-    
-    & + *{
+    & + * {
         margin-top: 50px !important;
     }
 }
-
-.content{
+.content {
     margin-bottom: 50px;
 }
-
 footer {
-   position:fixed!important;
+    position: fixed!important;
     bottom: 0px;
     width: 100%;
     height: 50px;
     background-color: $lichtblauw;
 }
-
-
 //laura
-
-@media (min-width: 0px) {
+.kop {
+    background-color: $blauw
+}
+.rowkleur {
+    background-color: $lichtblauw
+}
+@media (min-width: 0px) and (max-width:544px) {
     .container {
         margin: 0px;
         padding: 0px;
         max-width: 544px;
         text-align: center;
         padding-bottom: 50px;
-        
-        
-        h1{
+        h1 {
             font-size: 55px;
-             padding: 20px;
+            padding: 20px;
         }
-        h2{
+        h2 {
             padding: 20px 0px;
         }
         .kop {
             background: $blauw;
             padding: 30px 15px;
         }
-        .tekst{
+        .tekst {
             padding: 0px 20px 10px 20px;
         }
-        .instaleren{
-           
-        }
-        .backup{
-            background-color: $lichtblauw
-        }
-        .Defragmenteren{
-            
-        }
-       
-        
+        .instaleren {}
+        .backup {}
+        .Defragmenteren {}
     }
 }
-
-@media (min-width: 544px){
-    .container{
+@media (min-width: 544px) and (max-width:768px) {
+    .container {
         margin: 0px;
         padding: 0px;
         max-width: 768px;
         text-align: center;
-        
+        padding-bottom: 50px;
+        h1 {
+            font-size: 55px;
+            padding: 20px;
+        }
+        h2 {
+            padding: 20px 0px;
+        }
+        .tekst {
+            padding: 0px 35px 10px 35px;
+        }
         .kop {
-            padding-top: 35px;
-            padding-bottom: 35px;
-            
-            h1{
-                padding: 30px;
-                font-size: 60px;
-            }
-            p{
-                padding: 0px 50px;
-               
-            }
-    
+            padding: 35px 35px;
         }
     }
-        
 }
-
-
-
+@media (min-width: 768px) and (max-width:992px) {
+    .container {
+        margin: 0px;
+        padding: 0px 0px 50px 0px;
+        max-width: 992px;
+        h1 {
+            font-size: 55px;
+            padding: 20px;
+        }
+        h2 {
+            padding: 20px 0px;
+        }
+        .kop {
+            height: 100%;
+            text-align: center;
+            padding: 50px 40px 80px 40px;
+        }
+        .tekst {
+            padding: 0px 35px 10px 35px;
+        }
+        .row {
+            padding: 0px 70px;
+            .afb {
+                background-color: limegreen;
+                vertical-align: middle !important;
+                text-align: center;
+                padding: 20px;
+                margin: 90px 0px;
+                height: 50%;
+            }
+        }
+    }
+}
+@media (min-width: 992px){
+    .container{
+        margin: 0px;
+        padding: 0px 0px 50px 0px;
+        max-width: 100%;
+    }
+    .kop{
+        text-align: center;
+        padding: 100px 75px;
+    }
+    h1{
+        padding: 30px;
+    }
+    h2{
+        padding: 15px;
+    }
+    .tekst{
+        padding: 20px 50px ;
+    }
+}

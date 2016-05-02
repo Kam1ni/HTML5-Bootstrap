@@ -42,7 +42,15 @@ footer {
   background-color: #E3F2FD;
 }
 
-@media (min-width: 0px) {
+.kop {
+  background-color: #2196F3;
+}
+
+.rowkleur {
+  background-color: #E3F2FD;
+}
+
+@media (min-width: 0px) and (max-width: 544px) {
   .container {
     margin: 0px;
     padding: 0px;
@@ -64,26 +72,83 @@ footer {
   .container .tekst {
     padding: 0px 20px 10px 20px;
   }
-  .container .backup {
-    background-color: #E3F2FD;
-  }
 }
-@media (min-width: 544px) {
+@media (min-width: 544px) and (max-width: 768px) {
   .container {
     margin: 0px;
     padding: 0px;
     max-width: 768px;
     text-align: center;
+    padding-bottom: 50px;
+  }
+  .container h1 {
+    font-size: 55px;
+    padding: 20px;
+  }
+  .container h2 {
+    padding: 20px 0px;
+  }
+  .container .tekst {
+    padding: 0px 35px 10px 35px;
   }
   .container .kop {
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding: 35px 35px;
   }
-  .container .kop h1 {
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .container {
+    margin: 0px;
+    padding: 0px 0px 50px 0px;
+    max-width: 992px;
+  }
+  .container h1 {
+    font-size: 55px;
+    padding: 20px;
+  }
+  .container h2 {
+    padding: 20px 0px;
+  }
+  .container .kop {
+    height: 100%;
+    text-align: center;
+    padding: 50px 40px 80px 40px;
+  }
+  .container .tekst {
+    padding: 0px 35px 10px 35px;
+  }
+  .container .row {
+    padding: 0px 70px;
+  }
+  .container .row .afb {
+    background-color: limegreen;
+    vertical-align: middle !important;
+    text-align: center;
+    padding: 20px;
+    margin: 90px 0px;
+    height: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    margin: 0px;
+    padding: 0px 0px 50px 0px;
+    max-width: 100%;
+  }
+
+  .kop {
+    text-align: center;
+    padding: 100px 75px;
+  }
+
+  h1 {
     padding: 30px;
-    font-size: 60px;
   }
-  .container .kop p {
-    padding: 0px 50px;
+
+  h2 {
+    padding: 15px;
+  }
+
+  .tekst {
+    padding: 20px 50px;
   }
 }
