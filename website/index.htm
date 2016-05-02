@@ -25,14 +25,18 @@
             function(){
                 if ($("#nav-main").hasClass("hidden")){
                     $("#nav-main").removeClass("hidden").addClass("extending");
+                    $("#nav-btn").addClass("active");
                     setTimeout(function(){
-                        $("#nav-main").removeClass("extending").addClass("shown");;
+                        $("#nav-main").removeClass("extending").addClass("shown");
+                        $("#nav-btn").removeClass("active");
                     }, 250);
                 }
                 else if ($("#nav-main").hasClass("shown")){
                     $("#nav-main").removeClass("shown").addClass("collapsing");
+                    $("#nav-btn").addClass("active");
                     setTimeout(function(){
-                        $("#nav-main").removeClass("collapsing").addClass("hidden");;
+                        $("#nav-main").removeClass("collapsing").addClass("hidden");
+                        $("#nav-btn").removeClass("active");
                     }, 250);
                 }
                 });
@@ -41,8 +45,10 @@
   </head>
   <body>
    <nav class="nav-button nav nav-bar navbar-fixed-top">
-       <i class="fa fa-bars btn" id="nav-btn"></i>
+       <i class="fa fa-bars" id="nav-btn"></i>
    </nav>
+   
+   
     <nav class="navbar navbar-dark bg-inverse navbar-fixed-top hidden" id="nav-main">
       <div class="nav navbar-nav">
           <ul>
