@@ -1,6 +1,11 @@
 $blauw: #2196F3;
 $lichtblauw:#E3F2FD;
+
+/*
+body{
+=======
 body {
+>>>>>>> master
     padding: 0px;
 }
 .navbar {
@@ -14,32 +19,153 @@ body {
         padding-top: 0px !important;
         padding-bottom: 0px !important;
     }
+<<<<<<< HEAD
+    
+    ul {
+        padding-left: 0px;
+        
+        li{
+            display: inline;
+        }
+    }
+    
+    a{
+=======
     a {
+>>>>>>> master
         margin-left: 0px !important;
         padding-right: 10px;
         padding-left: 10px;
         vertical-align: middle;
         line-height: 50px;
     }
+<<<<<<< HEAD
+    
+    a:hover{
+        color:white !important;
+=======
     a:hover {
         color: white;
+>>>>>>> master
         text-decoration: none;
-        background-color: gray;
+        background-color: rgba(0,0,0, 0.9)
     }
     & + * {
         margin-top: 50px !important;
     }
 }
-.content {
-    margin-bottom: 50px;
-}
+<<<<<<< HEAD
+*/
+
 footer {
-    position: fixed!important;
-    bottom: 0px;
     width: 100%;
     height: 50px;
     background-color: $lichtblauw;
 }
+
+
+@media screen and (max-device-width: 480px){
+    $phone-nav-hoogte: 50px;
+    $phone-nav-breedte: 80%;
+    .navbar{
+        width: $phone-nav-breedte;
+        height: 100%;
+        padding: 0px;
+        
+        *{
+            padding: 0px;
+        }
+        
+        ul li{                
+            display:table;
+            list-style: none;
+            width: 100%;
+        }
+        
+        .nav-brand{
+            img, a{
+                height: $phone-nav-hoogte;
+                padding-top: 0px;
+                padding-bottom: 0px;
+            }
+        }
+        
+        a{
+            width: 100%;
+            padding-left: 20px;
+            color: white !important;
+            &:active{
+                background-color: darken($blauw, 25%);
+            }
+        }
+        
+        .active{
+            background-color: darken($blauw, 25%);
+        }
+    }
+    
+    .hidden{
+        left: -$phone-nav-breedte;
+    }
+    
+    .extending{
+        left: -$phone-nav-breedte;
+        animation-name: extend;
+        animation-duration: 0.25s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+    }
+    
+    @keyframes extend{
+        from{
+            left:-$phone-nav-breedte;
+        }
+        to{
+            left:0px;
+        }
+    }
+    
+    .collapsing{
+        left: 0px;
+        animation-name: collapse;
+        animation-duration: 0.25s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+    }
+    
+    @keyframes collapse{
+        from{
+            left: 0px;
+        }
+        to{
+            left: -$phone-nav-breedte;
+        }
+    }
+    
+    .content{
+        margin-top: $phone-nav-hoogte !important;
+    }
+    
+    .nav-button{      
+        height: $phone-nav-hoogte;
+        text-align: right;
+        background-color: $blauw;
+        color: white;
+        padding: 5px 10px;
+        #nav-btn{
+            background-color: rgba(0,0,0, 0.5);
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 25px;
+            margin-right: 10px;
+        }
+    }
+}
+    
+
+
+
+
 //laura
 .kop {
     background-color: $blauw

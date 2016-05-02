@@ -1,47 +1,150 @@
+/*
+body{
+=======
 body {
-  padding: 0px;
+>>>>>>> master
+    padding: 0px;
 }
-
 .navbar {
-  border-radius: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  height: 50px;
+    border-radius: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 50px;
+    * {
+        color: lightgray;
+        height: 100%;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+<<<<<<< HEAD
+    
+    ul {
+        padding-left: 0px;
+        
+        li{
+            display: inline;
+        }
+    }
+    
+    a{
+=======
+    a {
+>>>>>>> master
+        margin-left: 0px !important;
+        padding-right: 10px;
+        padding-left: 10px;
+        vertical-align: middle;
+        line-height: 50px;
+    }
+<<<<<<< HEAD
+    
+    a:hover{
+        color:white !important;
+=======
+    a:hover {
+        color: white;
+>>>>>>> master
+        text-decoration: none;
+        background-color: rgba(0,0,0, 0.9)
+    }
+    & + * {
+        margin-top: 50px !important;
+    }
 }
-.navbar * {
-  color: lightgray;
-  height: 100%;
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
-}
-.navbar a {
-  margin-left: 0px !important;
-  padding-right: 10px;
-  padding-left: 10px;
-  vertical-align: middle;
-  line-height: 50px;
-}
-.navbar a:hover {
-  color: white;
-  text-decoration: none;
-  background-color: gray;
-}
-.navbar + * {
-  margin-top: 50px !important;
-}
-
-.content {
-  margin-bottom: 50px;
-}
-
+<<<<<<< HEAD
+*/
 footer {
-  position: fixed !important;
-  bottom: 0px;
   width: 100%;
   height: 50px;
   background-color: #E3F2FD;
 }
 
+@media screen and (max-device-width: 480px) {
+  .navbar {
+    width: 80%;
+    height: 100%;
+    padding: 0px;
+  }
+  .navbar * {
+    padding: 0px;
+  }
+  .navbar ul li {
+    display: table;
+    list-style: none;
+    width: 100%;
+  }
+  .navbar .nav-brand img, .navbar .nav-brand a {
+    height: 50px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .navbar a {
+    width: 100%;
+    padding-left: 20px;
+    color: white !important;
+  }
+  .navbar a:active {
+    background-color: #08528d;
+  }
+  .navbar .active {
+    background-color: #08528d;
+  }
+
+  .hidden {
+    left: -80%;
+  }
+
+  .extending {
+    left: -80%;
+    animation-name: extend;
+    animation-duration: 0.25s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+  }
+
+  @keyframes extend {
+    from {
+      left: -80%;
+    }
+    to {
+      left: 0px;
+    }
+  }
+  .collapsing {
+    left: 0px;
+    animation-name: collapse;
+    animation-duration: 0.25s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+  }
+
+  @keyframes collapse {
+    from {
+      left: 0px;
+    }
+    to {
+      left: -80%;
+    }
+  }
+  .content {
+    margin-top: 50px !important;
+  }
+
+  .nav-button {
+    height: 50px;
+    text-align: right;
+    background-color: #2196F3;
+    color: white;
+    padding: 5px 10px;
+  }
+  .nav-button #nav-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 25px;
+    margin-right: 10px;
+  }
+}
 .kop {
   background-color: #2196F3;
 }
