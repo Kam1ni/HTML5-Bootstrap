@@ -14,11 +14,13 @@
 
     <link rel="stylesheet" href="css/style.css">
     
+    <!--jquery-->
     <script src="http://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
     
     <script type="text/javascript">
         $(document).ready(
         function(){
+            //mobile nav button extend & collapse
             $("#nav-btn").click(
             function(){
                 if ($("#nav-main").hasClass("hidden")){
@@ -38,14 +40,13 @@
     </script>
   </head>
   <body>
-   <nav class="nav-button nav nav-bar navbar-fixed-top contianer">
-       <i class="fa fa-bars btn fa-2x" id="nav-btn"></i>
+   <nav class="nav-button nav nav-bar navbar-fixed-top">
+       <i class="fa fa-bars btn" id="nav-btn"></i>
    </nav>
     <nav class="navbar navbar-dark bg-inverse navbar-fixed-top hidden" id="nav-main">
-     <div class="container">
       <div class="nav navbar-nav">
           <ul>
-           <li><a class="nav-item nav-link nav-brand active" href=""><img src="img/logo-wit.png" alt="logo naar home" height="20px"/></a></li>
+           <li class="active"><a class="nav-item nav-brand" href=""><img src="img/logo-wit.png" alt="logo naar home" height="20px"/></a></li>
             <li><a class="nav-item nav-link" href="">lid 1 pagina 1</a></li>
             <li><a class="nav-item nav-link" href="">lid 1 pagina 2</a></li>
             <li><a class="nav-item nav-link" href="">lid 2 pagina 1</a></li>
@@ -54,7 +55,6 @@
             <li><a class="nav-item nav-link" href="">lid 3 pagina 2</a></li>
            </ul>
         </div>
-     </div>
     </nav>
     
     <div class="container content">
