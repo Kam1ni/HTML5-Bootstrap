@@ -22,10 +22,16 @@
             $("#nav-btn").click(
             function(){
                 if ($("#nav-main").hasClass("hidden")){
-                    $("#nav-main").removeClass("hidden").addClass("shown");
+                    $("#nav-main").removeClass("hidden").addClass("extending");
+                    setTimeout(function(){
+                        $("#nav-main").removeClass("extending").addClass("shown");;
+                    }, 250);
                 }
                 else if ($("#nav-main").hasClass("shown")){
-                    $("#nav-main").removeClass("shown").addClass("hidden");
+                    $("#nav-main").removeClass("shown").addClass("collapsing");
+                    setTimeout(function(){
+                        $("#nav-main").removeClass("collapsing").addClass("hidden");;
+                    }, 250);
                 }
                 });
         })
@@ -33,7 +39,7 @@
   </head>
   <body>
    <nav class="nav-button nav nav-bar navbar-fixed-top contianer">
-       <i class="fa fa-bars btn fa-3x" id="nav-btn"></i>
+       <i class="fa fa-bars btn fa-2x" id="nav-btn"></i>
    </nav>
     <nav class="navbar navbar-dark bg-inverse navbar-fixed-top hidden" id="nav-main">
      <div class="container">

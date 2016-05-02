@@ -1,6 +1,6 @@
 $blauw: #2196F3;
 $lichtblauw:#E3F2FD;
-<<<<<<< HEAD
+
 /*
 body{
 =======
@@ -56,23 +56,17 @@ body {
 }
 <<<<<<< HEAD
 */
-.content{
-=======
+
 .content {
     margin-bottom: 50px;
->>>>>>> master
 }
 footer {
-<<<<<<< HEAD
-=======
     position: fixed!important;
     bottom: 0px;
->>>>>>> master
     width: 100%;
     height: 50px;
     background-color: $lichtblauw;
 }
-<<<<<<< HEAD
 
 
 @media screen and (max-device-width: 480px){
@@ -102,8 +96,44 @@ footer {
         left: -180px;
     }
     
+    .extending{
+        position: absolute;
+        left: -180px;
+        animation-name: extend;
+        animation-duration: 0.25s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+    }
+    
+    @keyframes extend{
+        from{
+            left:-180px;
+        }
+        to{
+            left:0px;
+        }
+    }
+    
+    .collapsing{
+        position: absolute;
+        left: 0px;
+        animation-name: collapse;
+        animation-duration: 0.25s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+    }
+    
+    @keyframes collapse{
+        from{
+            left: 0px;
+        }
+        to{
+            left: -180px;
+        }
+    }
+    
     .nav-button{
-        height: 70px;
+        height: 60px;
         text-align: right;
         vertical-align: middle;
         background-color: $blauw;
@@ -115,7 +145,13 @@ footer {
             text-align: center;
             vertical-align: middle;
         }
-=======
+    }
+}
+    
+
+
+
+
 //laura
 .kop {
     background-color: $blauw
@@ -222,6 +258,5 @@ footer {
     }
     .tekst{
         padding: 20px 50px ;
->>>>>>> master
     }
 }
