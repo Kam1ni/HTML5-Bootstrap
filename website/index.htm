@@ -9,25 +9,76 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap-4.0.0-alpha.2/dist/css/bootstrap.min.css">
     
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="css/style.css">
+    
+    <!--jquery-->
+    <script src="http://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(
+        function(){
+            //mobile nav button extend & collapse
+            $("#nav-btn").click(
+            function(){
+                if ($("#nav-main").hasClass("hidden")){
+                    $("#nav-main").removeClass("hidden").addClass("extending");
+                    setTimeout(function(){
+                        $("#nav-main").removeClass("extending").addClass("shown");;
+                    }, 250);
+                }
+                else if ($("#nav-main").hasClass("shown")){
+                    $("#nav-main").removeClass("shown").addClass("collapsing");
+                    setTimeout(function(){
+                        $("#nav-main").removeClass("collapsing").addClass("hidden");;
+                    }, 250);
+                }
+                });
+        })
+    </script>
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
-     <div class="container">
+   <nav class="nav-button nav nav-bar navbar-fixed-top">
+       <i class="fa fa-bars btn" id="nav-btn"></i>
+   </nav>
+    <nav class="navbar navbar-dark bg-inverse navbar-fixed-top hidden" id="nav-main">
       <div class="nav navbar-nav">
-           <a class="nav-item nav-link nav-brand active" href="">Home</a>
-            <a class="nav-item nav-link" href="">lid 1 pagina 1</a>
-            <a class="nav-item nav-link" href="">lid 1 pagina 2</a>
-            <a class="nav-item nav-link" href="">lid 2 pagina 1</a>
-            <a class="nav-item nav-link" href="">lid 2 pagina 2</a>
-            <a class="nav-item nav-link" href="">lid 3 pagina 1</a>
-            <a class="nav-item nav-link" href="">lid 3 pagina 2</a>
+          <ul>
+           <li class="active"><a class="nav-item nav-brand" href=""><img src="img/logo-wit.png" alt="logo naar home" height="20px"/></a></li>
+            <li><a class="nav-item nav-link" href="">lid 1 pagina 1</a></li>
+            <li><a class="nav-item nav-link" href="">lid 1 pagina 2</a></li>
+            <li><a class="nav-item nav-link" href="">lid 2 pagina 1</a></li>
+            <li><a class="nav-item nav-link" href="">lid 2 pagina 2</a></li>
+            <li><a class="nav-item nav-link" href="">lid 3 pagina 1</a></li>
+            <li><a class="nav-item nav-link" href="">lid 3 pagina 2</a></li>
+           </ul>
         </div>
-     </div>
     </nav>
     
     <div class="container content">
         <!--De inhoude komt hier!!!!!!!!!!!!!!!-->
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias atque cupiditate vero inventore non recusandae quos fugit explicabo quaerat voluptas, minima commodi voluptatum ipsum quo unde facilis quas, magnam dignissimos.</div>
+        <div>Repellat doloremque porro, dignissimos numquam maxime magni architecto dolorem ab iusto distinctio temporibus vel ipsa explicabo quidem! Nulla neque incidunt veniam architecto optio repellat voluptas eveniet sed laudantium amet! At?</div>
+        <div>Velit optio quis itaque illo, accusamus unde eaque non modi alias fugit et repellendus quaerat sequi atque vitae maiores blanditiis libero numquam incidunt excepturi ipsam voluptates laudantium at reiciendis. Minus!</div>
+        <div>Consequuntur, eos deserunt expedita obcaecati nulla accusantium officiis maxime rerum quibusdam. Voluptate non eos molestiae alias consequuntur rem ad nihil, rerum asperiores aperiam officia quos dolorem ipsum cumque placeat voluptates.</div>
+        <div>Illum obcaecati sed saepe in autem repellat. Voluptates tempora, repudiandae impedit voluptate totam consequatur in similique incidunt laborum labore obcaecati, laudantium ullam rerum molestias explicabo commodi cum autem. Iure, libero!</div>
+        <div>Explicabo eligendi sint voluptas incidunt, ratione laboriosam consectetur eaque esse et, natus cupiditate cumque omnis tempora necessitatibus commodi. Quod dolorum iusto voluptate quaerat, nisi vel quasi quisquam, repudiandae labore ex.</div>
+        <div>Iste, assumenda, autem. Incidunt recusandae quisquam eligendi ad blanditiis, expedita, sint ut iure nisi! Ipsam a quae perferendis pariatur dolorem vero quaerat temporibus explicabo impedit, tempore, ex odio aspernatur, eius.</div>
+        <div>Ducimus culpa, iure molestiae architecto neque quae doloribus non. Porro est nostrum, quam error nisi earum consectetur architecto culpa fugit officia vero omnis eius eligendi! Doloremque facilis architecto, numquam rerum.</div>
+        <div>Autem iusto perferendis laboriosam. Incidunt pariatur, eius culpa! Sed possimus quidem, at inventore, ab excepturi cumque explicabo numquam! Assumenda delectus nobis maxime voluptatibus, magnam minima enim consequatur, animi perferendis suscipit.</div>
+        <div>Omnis, maiores, soluta cumque vero modi laborum, ipsam sed maxime iusto aut impedit fugiat fuga consequatur eveniet beatae assumenda totam quibusdam velit rem unde officia saepe rerum. Minus, soluta, dolores.</div>
+        <div>Laborum voluptas ea maiores. Cumque a at consectetur vitae laboriosam quia nam. Expedita animi incidunt architecto aliquid ratione quas assumenda consequuntur provident ipsa qui accusantium eos fugit inventore, eaque dolor.</div>
+        <div>Neque natus eos tempora dignissimos, necessitatibus illum earum sunt aperiam consequuntur. Atque quasi autem incidunt, veniam in beatae tempore nemo molestiae, ut explicabo quo asperiores deleniti aperiam nihil eius, ipsam.</div>
+        <div>Veritatis accusantium laborum quasi ut officiis laudantium, accusamus odit hic sunt architecto omnis culpa alias earum excepturi molestias deserunt perferendis fugit tenetur explicabo dolorem! Veniam est harum ratione maxime impedit.</div>
+        <div>Quasi quisquam voluptates, in enim molestiae. Rerum nobis alias expedita quo fugit facilis at, natus provident dolores, dolor numquam nihil amet dolorum blanditiis mollitia minus nemo perferendis, quis asperiores iure?</div>
+        <div>Nemo libero, quam cum doloribus optio rerum in quae esse voluptatem repellat nam, perspiciatis totam. Earum ab laboriosam tenetur reiciendis aut enim dolore quas natus dolorum quis. Excepturi, reiciendis enim.</div>
+        <div>Voluptatem, delectus impedit ratione quasi quos quo fugit dignissimos voluptates reprehenderit, consectetur illo. Magni, quia, veritatis! Esse eos, hic eligendi voluptatem, aut doloribus maiores placeat repellat, in dolores asperiores ratione.</div>
+        <div>Suscipit accusantium pariatur consectetur facere alias atque consequuntur possimus quia corporis tempore eveniet ipsa nihil, expedita repellat deserunt sunt quos doloribus aperiam quas voluptate blanditiis quam, assumenda ratione reiciendis cum.</div>
+        <div>Voluptatum odit dignissimos provident aperiam adipisci autem cum possimus aspernatur repellat accusamus veritatis, reiciendis iure, modi officiis facere fugiat non voluptatem eveniet. Numquam deserunt culpa, ipsam molestiae quisquam aspernatur, excepturi.</div>
+        <div>Numquam quisquam nesciunt molestias laborum, rem iusto cum earum eos autem quo harum, mollitia reiciendis eveniet odit iure quaerat eligendi quidem nostrum rerum quae. Reprehenderit perspiciatis, repellat sunt voluptatibus voluptates!</div>
+        <div>Perferendis impedit iusto dolorem, deleniti? Natus perferendis illo nihil aperiam magnam, quo itaque doloribus dolores pariatur perspiciatis ex architecto quis, possimus laudantium ullam molestias sit illum quaerat veniam ut beatae!</div>
     </div>
     
     <footer class="footer">
