@@ -114,6 +114,9 @@ footer {
             width: 100%;
             padding-left: 20px;
             color: white !important;
+            &:hover{
+                background-color: darken($blauw, 10%);
+            }
             &:active{
                 background-color: darken($blauw, 25%);
             }

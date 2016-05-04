@@ -98,6 +98,9 @@ footer {
     padding-left: 20px;
     color: white !important;
   }
+  .navbar a:hover {
+    background-color: #0c7cd5;
+  }
   .navbar a:active {
     background-color: #08528d;
   }
