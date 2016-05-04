@@ -65,10 +65,23 @@ footer {
     background-color: $lichtblauw;
 }
 
+//laura
+.kop {
+    background-color: $blauw
+}
+.rowkleur {
+    background-color: $lichtblauw
+}
 
-@media screen and (max-device-width: 480px){
+//--------------------------------------------------------------------------------------------------------------
+
+@media (min-width: 0px) and (max-width:544px) {
     $phone-nav-hoogte: 50px;
     $phone-nav-breedte: 80%;
+    
+
+
+    
     .navbar{
         width: $phone-nav-breedte;
         height: 100%;
@@ -153,8 +166,6 @@ footer {
         margin-top: $phone-nav-hoogte;
     }
     
-    
-    
     .nav-button{      
         height: $phone-nav-hoogte;
         text-align: right;
@@ -163,29 +174,17 @@ footer {
         color: lightgray;
         display: table-cell;
         padding: 10px;
+        padding-right: 15px;
         #nav-btn{
             font-size: 25px;
-            margin-right: 10px;
         }
         
         .active{
             color: white;
         }
     }
-}
     
-
-
-
-
-//laura
-.kop {
-    background-color: $blauw
-}
-.rowkleur {
-    background-color: $lichtblauw
-}
-@media (min-width: 481px) and (max-width:544px) {
+    
     .container {
         margin: 0px;
         padding: 0px;
@@ -211,6 +210,9 @@ footer {
         .Defragmenteren {}
     }
 }
+
+//--------------------------------------------------------------------------------------------------------------
+
 @media (min-width: 544px) and (max-width:768px) {
     .container {
         margin: 0px;
@@ -233,6 +235,9 @@ footer {
         }
     }
 }
+
+//--------------------------------------------------------------------------------------------------------------
+
 @media (min-width: 768px) and (max-width:992px) {
     .container {
         margin: 0px;
@@ -266,6 +271,10 @@ footer {
         }
     }
 }
+
+
+//--------------------------------------------------------------------------------------------------------------
+
 @media (min-width: 992px){
     .container{
         margin: 0px;

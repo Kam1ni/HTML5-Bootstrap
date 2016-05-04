@@ -61,7 +61,15 @@ footer {
   background-color: #E3F2FD;
 }
 
-@media screen and (max-device-width: 480px) {
+.kop {
+  background-color: #2196F3;
+}
+
+.rowkleur {
+  background-color: #E3F2FD;
+}
+
+@media (min-width: 0px) and (max-width: 544px) {
   .navbar {
     width: 80%;
     height: 100%;
@@ -145,24 +153,15 @@ footer {
     color: lightgray;
     display: table-cell;
     padding: 10px;
+    padding-right: 15px;
   }
   .nav-button #nav-btn {
     font-size: 25px;
-    margin-right: 10px;
   }
   .nav-button .active {
     color: white;
   }
-}
-.kop {
-  background-color: #2196F3;
-}
 
-.rowkleur {
-  background-color: #E3F2FD;
-}
-
-@media (min-width: 481px) and (max-width: 544px) {
   .container {
     margin: 0px;
     padding: 0px;
