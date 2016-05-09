@@ -5910,3 +5910,70 @@ a.bg-danger:focus, a.bg-danger:hover {
     display: none !important;
   }
 }
+
+@media (max-width: 991px) {
+  #navbar-btn {
+    height: 50px;
+    font-size: 20px;
+  }
+
+  nav[id="nav"] {
+    height: 100%;
+    width: 80%;
+  }
+  nav[id="nav"] ul {
+    margin: 0px;
+    padding: 0px;
+  }
+  nav[id="nav"] ul li {
+    height: 50px;
+    width: 100%;
+  }
+  nav[id="nav"] ul li a {
+    margin: 16px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 100%;
+    width: 100%;
+  }
+  nav[id="nav"] + div {
+    margin-top: 50px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .extending {
+    left: -80%;
+    animation-name: extend;
+    animation-duration: 0.25s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+  }
+
+  @keyframes extend {
+    from {
+      left: -80%;
+    }
+    to {
+      left: 0px;
+    }
+  }
+  .collapsing {
+    left: 0px;
+    animation-name: collapse;
+    animation-duration: 0.25s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+  }
+
+  @keyframes collapse {
+    from {
+      left: 0px;
+    }
+    to {
+      left: -80%;
+    }
+  }
+}
