@@ -1,0 +1,72 @@
+@include media-breakpoint-down(md) 
+{
+    $phone-nav-breedte: 80%;
+    $phone-nav-hoogte: 50px;
+    #navbar-btn{
+        height: $phone-nav-hoogte;
+        font-size: 20px;
+    }
+    nav[id="nav"]
+    {
+        height: 100%;
+        width: $phone-nav-breedte;
+        ul
+        {
+            margin: 0px;
+            padding: 0px;
+            li{
+                height: $phone-nav-hoogte;
+                width: 100%;
+                
+                a{
+                    margin: 16px;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        &+div
+        {
+            margin-top: $phone-nav-hoogte;
+        }
+    }
+    .hidden{
+        display: none;
+    }
+
+    .extending{
+        left: -$phone-nav-breedte;
+        animation-name: extend;
+        animation-duration: 0.25s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+    }
+
+    @keyframes extend{
+        from{
+            left:-$phone-nav-breedte;
+        }
+        to{
+            left:0px;
+        }
+    }
+
+    .collapsing{
+        left: 0px;
+        animation-name: collapse;
+        animation-duration: 0.25s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+    }
+
+    @keyframes collapse{
+        from{
+            left: 0px;
+        }
+        to{
+            left: -$phone-nav-breedte;
+        }
+    }
+}
