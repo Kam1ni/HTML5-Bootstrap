@@ -3,6 +3,12 @@
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+/*
+blue header, menubalken: #2196F3
+invulling pagina bleu: #E3F2FD
+bruin: #F4A55E
+donker bruin:#C04307 
+*/
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -331,7 +337,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  color: #373a3c;
+  color: #2196F3;
   background-color: #fff;
 }
 
@@ -739,7 +745,7 @@ pre {
   margin-bottom: 1rem;
   font-size: 90%;
   line-height: 1.5;
-  color: #373a3c;
+  color: #2196F3;
 }
 pre code {
   padding: 0;
@@ -1986,17 +1992,17 @@ pre code {
 
 .thead-inverse th {
   color: #fff;
-  background-color: #373a3c;
+  background-color: #2196F3;
 }
 
 .thead-default th {
-  color: #55595c;
+  color: #E3F2FD;
   background-color: #eceeef;
 }
 
 .table-inverse {
   color: #eceeef;
-  background-color: #373a3c;
+  background-color: #2196F3;
 }
 .table-inverse.table-bordered {
   border: 0;
@@ -2004,7 +2010,7 @@ pre code {
 .table-inverse th,
 .table-inverse td,
 .table-inverse thead th {
-  border-color: #55595c;
+  border-color: #E3F2FD;
 }
 
 .table-reflow thead {
@@ -2046,7 +2052,7 @@ pre code {
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
-  color: #55595c;
+  color: #E3F2FD;
   background-color: #fff;
   background-image: none;
   border: 1px solid #ccc;
@@ -2414,28 +2420,28 @@ fieldset[disabled] a.btn {
 }
 
 .btn-secondary {
-  color: #373a3c;
+  color: #2196F3;
   background-color: #fff;
   border-color: #ccc;
 }
 .btn-secondary:hover {
-  color: #373a3c;
+  color: #2196F3;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
 .btn-secondary:focus, .btn-secondary.focus {
-  color: #373a3c;
+  color: #2196F3;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
 .btn-secondary:active, .btn-secondary.active, .open > .btn-secondary.dropdown-toggle {
-  color: #373a3c;
+  color: #2196F3;
   background-color: #e6e6e6;
   border-color: #adadad;
   background-image: none;
 }
 .btn-secondary:active:hover, .btn-secondary:active:focus, .btn-secondary:active.focus, .btn-secondary.active:hover, .btn-secondary.active:focus, .btn-secondary.active.focus, .open > .btn-secondary.dropdown-toggle:hover, .open > .btn-secondary.dropdown-toggle:focus, .open > .btn-secondary.dropdown-toggle.focus {
-  color: #373a3c;
+  color: #2196F3;
   background-color: #d4d4d4;
   border-color: #8c8c8c;
 }
@@ -2840,7 +2846,7 @@ input[type="button"].btn-block {
   padding: 5px 0;
   margin: 2px 0 0;
   font-size: 1rem;
-  color: #373a3c;
+  color: #2196F3;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -2863,14 +2869,14 @@ input[type="button"].btn-block {
   clear: both;
   font-weight: normal;
   line-height: 1.5;
-  color: #373a3c;
+  color: #2196F3;
   text-align: inherit;
   white-space: nowrap;
   background: none;
   border: 0;
 }
 .dropdown-item:focus, .dropdown-item:hover {
-  color: #2b2d2f;
+  color: #0d8aee;
   text-decoration: none;
   background-color: #f5f5f5;
 }
@@ -3157,7 +3163,7 @@ input[type="button"].btn-block {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1;
-  color: #55595c;
+  color: #E3F2FD;
   text-align: center;
   background-color: #eceeef;
   border: 1px solid #ccc;
@@ -3322,7 +3328,7 @@ input[type="button"].btn-block {
   max-width: 100%;
   padding: .375rem 1.75rem .375rem .75rem;
   padding-right: .75rem \9;
-  color: #55595c;
+  color: #E3F2FD;
   vertical-align: middle;
   background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC) no-repeat right 0.75rem center;
   background-image: none \9;
@@ -3462,7 +3468,7 @@ input[type="button"].btn-block {
 .nav-tabs .nav-item.open .nav-link,
 .nav-tabs .nav-item.open .nav-link:focus,
 .nav-tabs .nav-item.open .nav-link:hover {
-  color: #55595c;
+  color: #E3F2FD;
   background-color: #fff;
   border-color: #ddd #ddd transparent;
 }
@@ -5517,7 +5523,7 @@ a.text-danger:focus, a.text-danger:hover {
 
 .bg-inverse {
   color: #eceeef;
-  background-color: #373a3c;
+  background-color: #2196F3;
 }
 
 .bg-faded {
