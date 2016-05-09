@@ -1,6 +1,6 @@
 $blauw: #2196F3;
 $lichtblauw:#E3F2FD;
-$font :'Bangers', cursive;
+
 /*
 body{
 =======
@@ -64,17 +64,21 @@ footer {
     bottom: 50px;
     background-color: $lichtblauw;
 }
-@media screen and (max-device-width: 480px) {
+
+
+@media screen and (max-device-width: 480px){
     $phone-nav-hoogte: 50px;
     $phone-nav-breedte: 80%;
-    .navbar {
+    .navbar{
         width: $phone-nav-breedte;
         height: 100%;
         padding: 0px;
-        * {
+        
+        *{
             padding: 0px;
             font-size: 20px;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
         ul li {
             display: table;
@@ -82,6 +86,11 @@ footer {
         
         ul li{                
 >>>>>>> refs/remotes/origin/master
+=======
+        
+        ul li{                
+            display:table;
+>>>>>>> parent of 331cfca... iets
             list-style: none;
             width: 100%;
             height: $phone-nav-hoogte;
@@ -89,14 +98,15 @@ footer {
             margin-bottom: 0px;
             line-height: $phone-nav-hoogte - 6.8*2;
         }
-        .nav-brand {
-            img,
-            a {
+        
+        .nav-brand{
+            img, a{
                 height: $phone-nav-hoogte;
                 padding-top: 0px;
                 padding-bottom: 0px;
             }
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
         a {
 =======
@@ -104,50 +114,61 @@ footer {
         a{
             height: 100%;
 >>>>>>> refs/remotes/origin/master
+=======
+        
+        a{
+>>>>>>> parent of 331cfca... iets
             width: 100%;
             padding-left: 20px;
             color: white !important;
-            &:active {
+            &:active{
                 background-color: darken($blauw, 25%);
             }
         }
-        .active {
+        
+        .active{
             background-color: darken($blauw, 25%);
         }
     }
-    .hidden {
+    
+    .hidden{
         left: -$phone-nav-breedte;
     }
-    .extending {
+    
+    .extending{
         left: -$phone-nav-breedte;
         animation-name: extend;
         animation-duration: 0.25s;
         animation-iteration-count: 1;
         animation-timing-function: ease-out;
     }
-    @keyframes extend {
-        from {
-            left: -$phone-nav-breedte;
+    
+    @keyframes extend{
+        from{
+            left:-$phone-nav-breedte;
         }
-        to {
-            left: 0px;
+        to{
+            left:0px;
         }
     }
-    .collapsing {
+    
+    .collapsing{
         left: 0px;
         animation-name: collapse;
         animation-duration: 0.25s;
         animation-iteration-count: 1;
         animation-timing-function: ease-out;
     }
-    @keyframes collapse {
-        from {
+    
+    @keyframes collapse{
+        from{
             left: 0px;
         }
-        to {
+        to{
             left: -$phone-nav-breedte;
         }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     .content {
         margin-top: $phone-nav-hoogte !important;
@@ -163,6 +184,14 @@ footer {
     
     .nav-button{      
 >>>>>>> refs/remotes/origin/master
+=======
+    
+    .content{
+        margin-top: $phone-nav-hoogte !important;
+    }
+    
+    .nav-button{      
+>>>>>>> parent of 331cfca... iets
         height: $phone-nav-hoogte;
         text-align: right;
         vertical-align: middle;
@@ -170,8 +199,8 @@ footer {
 <<<<<<< HEAD
         color: white;
         padding: 5px 10px;
-        #nav-btn {
-            background-color: rgba(0, 0, 0, 0.5);
+        #nav-btn{
+            background-color: rgba(0,0,0, 0.5);
             padding-left: 10px;
             padding-right: 10px;
 =======
@@ -189,6 +218,11 @@ footer {
         }
     }
 }
+    
+
+
+
+
 //laura
 .kop {
     background-color: $blauw
@@ -204,7 +238,6 @@ footer {
         text-align: center;
         padding-bottom: 50px;
         h1 {
-            font-family: font;
             font-size: 55px;
             padding: 20px;
         }
@@ -278,34 +311,23 @@ footer {
         }
     }
 }
-@media (min-width: 992px) {
-    .container {
+@media (min-width: 992px){
+    .container{
         margin: 0px;
         padding: 0px 0px 50px 0px;
         max-width: 100%;
     }
-    .kop {
+    .kop{
         text-align: center;
         padding: 100px 75px;
     }
-    h1 {
+    h1{
         padding: 30px;
     }
-    h2 {
+    h2{
         padding: 15px;
     }
-    .tekst {
-        padding: 20px 20px;
-    }
-    .row {
-        padding: 0px 70px;
-        .afb {
-            background-color: limegreen;
-            vertical-align: middle !important;
-            text-align: center;
-            padding: 20px ;
-            margin: 100px 0px;
-            
-        }
+    .tekst{
+        padding: 20px 50px ;
     }
 }
