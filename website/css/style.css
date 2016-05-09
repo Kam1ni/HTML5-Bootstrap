@@ -73,7 +73,8 @@ footer {
     list-style: none;
     width: 100%;
   }
-  .navbar .nav-brand img, .navbar .nav-brand a {
+  .navbar .nav-brand img,
+  .navbar .nav-brand a {
     height: 50px;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -252,6 +253,17 @@ footer {
   }
 
   .tekst {
-    padding: 20px 50px;
+    padding: 20px 20px;
+  }
+
+  .row {
+    padding: 0px 70px;
+  }
+  .row .afb {
+    background-color: limegreen;
+    vertical-align: middle !important;
+    text-align: center;
+    padding: 20px;
+    margin: 100px 0px;
   }
 }

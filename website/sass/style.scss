@@ -1,6 +1,6 @@
 $blauw: #2196F3;
 $lichtblauw:#E3F2FD;
-
+$font :'Bangers', cursive;
 /*
 body{
 =======
@@ -62,98 +62,85 @@ footer {
     height: 50px;
     background-color: $lichtblauw;
 }
-
-
-@media screen and (max-device-width: 480px){
+@media screen and (max-device-width: 480px) {
     $phone-nav-hoogte: 50px;
     $phone-nav-breedte: 80%;
-    .navbar{
+    .navbar {
         width: $phone-nav-breedte;
         height: 100%;
         padding: 0px;
-        
-        *{
+        * {
             padding: 0px;
         }
-        
-        ul li{                
-            display:table;
+        ul li {
+            display: table;
             list-style: none;
             width: 100%;
         }
-        
-        .nav-brand{
-            img, a{
+        .nav-brand {
+            img,
+            a {
                 height: $phone-nav-hoogte;
                 padding-top: 0px;
                 padding-bottom: 0px;
             }
         }
-        
-        a{
+        a {
             width: 100%;
             padding-left: 20px;
             color: white !important;
-            &:active{
+            &:active {
                 background-color: darken($blauw, 25%);
             }
         }
-        
-        .active{
+        .active {
             background-color: darken($blauw, 25%);
         }
     }
-    
-    .hidden{
+    .hidden {
         left: -$phone-nav-breedte;
     }
-    
-    .extending{
+    .extending {
         left: -$phone-nav-breedte;
         animation-name: extend;
         animation-duration: 0.25s;
         animation-iteration-count: 1;
         animation-timing-function: ease-out;
     }
-    
-    @keyframes extend{
-        from{
-            left:-$phone-nav-breedte;
+    @keyframes extend {
+        from {
+            left: -$phone-nav-breedte;
         }
-        to{
-            left:0px;
+        to {
+            left: 0px;
         }
     }
-    
-    .collapsing{
+    .collapsing {
         left: 0px;
         animation-name: collapse;
         animation-duration: 0.25s;
         animation-iteration-count: 1;
         animation-timing-function: ease-out;
     }
-    
-    @keyframes collapse{
-        from{
+    @keyframes collapse {
+        from {
             left: 0px;
         }
-        to{
+        to {
             left: -$phone-nav-breedte;
         }
     }
-    
-    .content{
+    .content {
         margin-top: $phone-nav-hoogte !important;
     }
-    
-    .nav-button{      
+    .nav-button {
         height: $phone-nav-hoogte;
         text-align: right;
         background-color: $blauw;
         color: white;
         padding: 5px 10px;
-        #nav-btn{
-            background-color: rgba(0,0,0, 0.5);
+        #nav-btn {
+            background-color: rgba(0, 0, 0, 0.5);
             padding-left: 10px;
             padding-right: 10px;
             font-size: 25px;
@@ -161,11 +148,6 @@ footer {
         }
     }
 }
-    
-
-
-
-
 //laura
 .kop {
     background-color: $blauw
@@ -181,6 +163,7 @@ footer {
         text-align: center;
         padding-bottom: 50px;
         h1 {
+            font-family: font;
             font-size: 55px;
             padding: 20px;
         }
@@ -254,23 +237,34 @@ footer {
         }
     }
 }
-@media (min-width: 992px){
-    .container{
+@media (min-width: 992px) {
+    .container {
         margin: 0px;
         padding: 0px 0px 50px 0px;
         max-width: 100%;
     }
-    .kop{
+    .kop {
         text-align: center;
         padding: 100px 75px;
     }
-    h1{
+    h1 {
         padding: 30px;
     }
-    h2{
+    h2 {
         padding: 15px;
     }
-    .tekst{
-        padding: 20px 50px ;
+    .tekst {
+        padding: 20px 20px;
+    }
+    .row {
+        padding: 0px 70px;
+        .afb {
+            background-color: limegreen;
+            vertical-align: middle !important;
+            text-align: center;
+            padding: 20px ;
+            margin: 100px 0px;
+            
+        }
     }
 }
