@@ -60,6 +60,8 @@ body {
 footer {
     width: 100%;
     height: 50px;
+    position:relative;
+    bottom: 50px;
     background-color: $lichtblauw;
 }
 @media screen and (max-device-width: 480px) {
@@ -71,11 +73,21 @@ footer {
         padding: 0px;
         * {
             padding: 0px;
+            font-size: 20px;
         }
+<<<<<<< HEAD
         ul li {
             display: table;
+=======
+        
+        ul li{                
+>>>>>>> refs/remotes/origin/master
             list-style: none;
             width: 100%;
+            height: $phone-nav-hoogte;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            line-height: $phone-nav-hoogte - 6.8*2;
         }
         .nav-brand {
             img,
@@ -85,7 +97,13 @@ footer {
                 padding-bottom: 0px;
             }
         }
+<<<<<<< HEAD
         a {
+=======
+        
+        a{
+            height: 100%;
+>>>>>>> refs/remotes/origin/master
             width: 100%;
             padding-left: 20px;
             color: white !important;
@@ -130,21 +148,44 @@ footer {
             left: -$phone-nav-breedte;
         }
     }
+<<<<<<< HEAD
     .content {
         margin-top: $phone-nav-hoogte !important;
     }
     .nav-button {
+=======
+    
+    .content{
+        margin-top: $phone-nav-hoogte;
+    }
+    
+    
+    
+    .nav-button{      
+>>>>>>> refs/remotes/origin/master
         height: $phone-nav-hoogte;
         text-align: right;
+        vertical-align: middle;
         background-color: $blauw;
+<<<<<<< HEAD
         color: white;
         padding: 5px 10px;
         #nav-btn {
             background-color: rgba(0, 0, 0, 0.5);
             padding-left: 10px;
             padding-right: 10px;
+=======
+        color: lightgray;
+        display: table-cell;
+        padding: 10px;
+        #nav-btn{
+>>>>>>> refs/remotes/origin/master
             font-size: 25px;
             margin-right: 10px;
+        }
+        
+        .active{
+            color: white;
         }
     }
 }
@@ -155,7 +196,7 @@ footer {
 .rowkleur {
     background-color: $lichtblauw
 }
-@media (min-width: 0px) and (max-width:544px) {
+@media (min-width: 481px) and (max-width:544px) {
     .container {
         margin: 0px;
         padding: 0px;
