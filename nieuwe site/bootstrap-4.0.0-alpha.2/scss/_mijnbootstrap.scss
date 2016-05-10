@@ -7,8 +7,16 @@
         height: $phone-nav-hoogte;
         font-size: 20px;
     }
+    
+    .nav-btn{
+        
+    }
+    
     nav[id="nav"]
     {
+        background-color: $dark-gray;
+        
+        
         padding: 0px;
         height: 100%;
         width: $phone-nav-breedte;
@@ -42,12 +50,12 @@
         }
         a:hover, nav-link:hover
         {
-            background-color: white;
+            background-color: $gray-dark;
             color: black !important;
         }
         
         .active{
-            background-color: blue;
+            background-color: darken($gray-dark, 25%);
         }
         &+div
         {
@@ -91,4 +99,46 @@
             left: -$phone-nav-breedte;
         }
     }
+}
+
+@include media-breakpoint-up(md)
+{
+    #nav
+    {
+        height: 50px;  
+        padding: 0px;
+        
+        a{
+            height: 100%;
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-top: 8px;
+        }
+        ul
+        {
+            padding-left: 0px;
+            margin-left: 0px;
+            height: 100%;
+            li{
+                height: 100%;
+                margin: 0px;
+                
+                a{
+                    padding-top: 14px;
+                }
+             }
+        }
+        
+        .navbar-brand
+        {
+            margin-right: 0px;
+        }
+        
+        
+        
+        a:hover{
+            background-color: darken($gray-dark, 25%);
+        }
+    }
+    
 }
