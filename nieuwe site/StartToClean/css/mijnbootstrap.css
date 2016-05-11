@@ -4,6 +4,12 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*
+blue header, menubalken: #2196F3
+invulling pagina bleu: #E3F2FD
+bruin: #F4A55E
+donker bruin:#C04307 
+*/
+/*
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;*/
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -6030,4 +6036,8 @@ a.bg-danger:focus, a.bg-danger:hover {
   .content {
     margin-top: 50px;
   }
+}
+section {
+  background-color: inherit;
+  color: black;
 }
