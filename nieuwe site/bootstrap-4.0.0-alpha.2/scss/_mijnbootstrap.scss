@@ -12,7 +12,7 @@
         
     }
     
-    nav[id="nav"]
+    #nav
     {
         background-color: $dark-gray;
         
@@ -101,7 +101,7 @@
     }
 }
 
-@include media-breakpoint-up(md)
+@include media-breakpoint-up(lg)
 {
     #nav
     {
@@ -139,6 +139,10 @@
         a:hover{
             background-color: darken($gray-dark, 25%);
         }
+    }
+    .content
+    {
+        margin-top: 50px;
     }
     
 }
