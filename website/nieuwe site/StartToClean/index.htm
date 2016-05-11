@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Disc Clean</title>
+
+    
+    <!-- Bootstrap core CSS -->
+    <link href="css/mijnbootstrap.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="img/faviconlogo.png" />
+    <!-- Custom styles for this template -->
+    <!--<link href="starter-template.css" rel="stylesheet">-->
+  </head>
+
+  <body>
+    <nav class="navbar navbar-fixed-top navbar-dark bg-inverse" id="navbar-btn">
+        <div class="col-md-10 col-sm-10 col-xs-10">Clean Disk</div>
+        <div class="col-md-2 col-sm-2 col-xs-2 text-md-right text-sm-right text-xs-right"><i class="fa fa-bars" id="nav-btn"></i></div>
+    </nav>
+    
+    
+    <nav class="navbar navbar-fixed-top navbar-dark bg-inverse hidden" id="nav">
+      <a class="navbar-brand active" href="#"><img src="img/logo.png" alt="logo" height="30"/></a>
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Lid 1 pagina 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Lid 1 pagina 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Lid 2 pagina 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Lid 2 pagina 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Lid 3 pagina 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Lid 3 pagina 2</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Bootstrap starter template</h1>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+      </div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+ 
+ 
+ <!-- Custom javascript -->
+ <script type="text/javascript">
+        $(document).ready(
+        function(){
+            //mobile nav button extend & collapse
+            $("#nav-btn").click(
+            function(){
+                if ($("#nav").hasClass("hidden")){
+                    $("#nav").removeClass("hidden").addClass("extending");
+                    $("#nav-btn").addClass("active");
+                    setTimeout(function(){
+                        $("#nav").removeClass("extending").addClass("shown");
+                        $("#nav-btn").removeClass("active");
+                    }, 250);
+                }
+                else if ($("#nav").hasClass("shown")){
+                    $("#nav").removeClass("shown").addClass("collapsing");
+                    $("#nav-btn").addClass("active");
+                    setTimeout(function(){
+                        $("#nav").removeClass("collapsing").addClass("hidden");
+                        $("#nav-btn").removeClass("active");
+                    }, 250);
+                }
+                });
+        })
+    </script>
+  </body>
+</html>
