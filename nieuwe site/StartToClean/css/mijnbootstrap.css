@@ -6037,7 +6037,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     margin-top: 50px;
   }
 }
-section {
+content {
   background-color: inherit;
   color: black;
 }
