@@ -59,9 +59,23 @@ footer {
   position: relative;
   bottom: 50px;
   background-color: #E3F2FD;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
-@media screen and (max-device-width: 480px) {
+.kop {
+  background-color: #2196F3;
+}
+
+.rowkleur {
+  background-color: #E3F2FD;
+}
+
+@media (min-width: 0px) and (max-width: 544px) {
+  body {
+    padding: 0px;
+  }
+
   .navbar {
     width: 80%;
     height: 100%;
@@ -89,6 +103,9 @@ footer {
     width: 100%;
     padding-left: 20px;
     color: white !important;
+  }
+  .navbar a:hover {
+    background-color: #0c7cd5;
   }
   .navbar a:active {
     background-color: #08528d;
@@ -133,10 +150,6 @@ footer {
       left: -80%;
     }
   }
-  .content {
-    margin-top: 50px;
-  }
-
   .nav-button {
     height: 50px;
     text-align: right;
@@ -144,45 +157,46 @@ footer {
     background-color: #2196F3;
     color: lightgray;
     display: table-cell;
-    padding: 10px;
+    /*padding: 10px;
+    padding-right: 15px;*/
   }
   .nav-button #nav-btn {
+    padding: 10px;
     font-size: 25px;
-    margin-right: 10px;
   }
   .nav-button .active {
     color: white;
   }
-}
-.kop {
-  background-color: #2196F3;
-}
 
-.rowkleur {
-  background-color: #E3F2FD;
-}
-
-@media (min-width: 481px) and (max-width: 544px) {
   .container {
+    /*
     margin: 0px;
-    padding: 0px;
-    max-width: 544px;
-    text-align: center;
+    padding: 0px 5px;
+    max-width: 544px;       
     padding-bottom: 50px;
+    h1 {
+        font-size: 55px;
+        padding: 20px;
+    }
+    h2 {
+        padding: 20px 0px;
+    }
+    .kop {
+        background: $blauw;
+        padding: 30px 15px;
+    }
+    .tekst {
+        padding: 0px 20px 10px 20px;
+    }
+    .instaleren {}
+    .backup {}
+    .Defragmenteren {}
+    */
+    text-align: center;
   }
-  .container h1 {
-    font-size: 55px;
-    padding: 20px;
-  }
-  .container h2 {
-    padding: 20px 0px;
-  }
-  .container .kop {
-    background: #2196F3;
-    padding: 30px 15px;
-  }
-  .container .tekst {
-    padding: 0px 20px 10px 20px;
+
+  .content {
+    margin-top: 50px;
   }
 }
 @media (min-width: 544px) and (max-width: 768px) {
