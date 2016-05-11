@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Disc Clean</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/mijnbootstrap.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="img/faviconlogo.png" />
+    <!-- Custom styles for this template -->
+    <!--<link href="starter-template.css" rel="stylesheet">-->
+</head>
+
+<body>
+    <nav class="navbar navbar-fixed-top navbar-dark bg-inverse" id="navbar-btn">
+        <div class="col-md-10 col-sm-10 col-xs-10">Clean Disk</div>
+        <div class="col-md-2 col-sm-2 col-xs-2 text-md-right text-sm-right text-xs-right"><i class="fa fa-bars" id="nav-btn"></i></div>
+    </nav>
+
+
+    <nav class="navbar navbar-fixed-top navbar-dark bg-inverse hidden" id="nav">
+        <a class="navbar-brand active" href="#"><img src="img/logo.png" alt="logo" height="30" /></a>
+        <ul class="nav navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Lid 1 pagina 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Lid 1 pagina 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Verwijderen_malware.htm">Verwijderen Malware</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Last resort</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Lid 3 pagina 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Lid 3 pagina 2</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container content">
+
+        <section>
+            <article>
+
+                <h1 id="last_resort">Last resort</h1>
+
+                <p>Soms is je computer niet meer te redden. Of tenminste de hoeveelheid tijd die er in gestoken moet worden om alle malware en virussen te verwijderen is gewoon te groot. In deze gevallen is het best om terug te grijpen naar je laatste back-up en je hele systeem gewoon opnieuw te installeren. </p>
+
+                <p>Een waarschuwing. Als je niet veel van computers kent is het beter om nu een persoon die iets van computers af weet het over te laten nemen. In sommige instructies die volgen neem ik aan dat je vertrouwd bent met meer geavanceerdere procedures.</p>
+
+                <p>Om dit uit te voeren heb je eerst je gewenste versie van windows (of een ander os indien gewenst.) nodig op verwisselbare media. Meestal zijn installatie cd’s meegeleverd bij aankoop van een computer. Maar indien deze niet bij de hand zijn kan me de iso’s bij microsoft downloaden. De tool van Microsoft kan zowel direct op usb installatie media aanmaken of een iso indien dit gewenst is.</p>
+
+                <h2 id="installatiemedia">Aanmaken van installatiemedia</h2>
+
+                <p>Indien je geen installatie cd's hebt dan zul je eerst installatie media moeten aanmaken.</p>
+
+                <h3>Windows 10:</h3>
+                <p>Download de windows 10 tool <a href="https://www.microsoft.com/en-us/software-download/windows10"> via deze link</a> en voer de executable uit. De setup zal je door het process om een bootable usb stick te loodsen. Zoals eerder aangehaald, kan deze tool ook een iso file maken indien gewenst. In deze gids nemen we aan dat je direct een usb bootable hebt aangemaakt met deze tool.</p>
+
+                <h3>windows 8.1/7/ lager of een linux systeem.</h3>
+
+                <p>Voor andere OS'en dan windows 10 zijn er geen tools om direct een usb bootable stick aan te maken zoals met de vorige tool. Dus nu hebben we zowel een iso image nodig van het gewenste OS. Meestal zijn deze te vinden op de site van Microsoft voor windows (vereist een geldige windows key.) of op de site van de linux distributie.</p>
+
+                <p>Dan hebben we ook een tool nodig om van deze iso een bootable usb stick te maken. Hiervoor gebruik ik meestal rufus. Dit is een simpele tool die men op <a href="https://rufus.akeo.ie/">de site van rufus</a> kan vinden. Run de executable die je daar download. En selecteer de gewenste USB en ISO zoals aangegeven in het gegeven voorbeeld. Klik daarna op start en wacht tot het proces gedaan.</p>
+
+                <figure>
+                    <img src="" alt="Screenshot van rufus programma" />
+                    <figcaption>Het rufus programma in gebruik</figcaption>
+                </figure>
+
+
+                <h3 id="installatie">Installatie van OS</h3>
+
+                <p>Bij windows 7 of lager en linux machines is het starten van de installatie procedure simpel. Sluit de installatiemedia aan de computer en start de PC op. Er zou een scherm moeten tevoorschijn komen met de bootschap. “press [toets] to choose boot device.” Druk op die knop en wacht even. Er zou na een tijd een lijst moeten tevoorschijn komen met een lijst van devices waarvan je kan boeten. Selecteer je installatie media en de setup zou moeten starten.</p>
+
+                <p>Windows 10 en 8 gebruiken UEFI in plaats van BIOS en men kan niet zomaar van een usb stick booten. Begin met de installatiemedia aan de computer te koppelen en start de pc op. Wacht tot men in het login scherm komt en houd dan de shift toets ingedrukt terwijl men op de restart knop drukt. In het scherm dat volgt klik op advanced startup options. Daarna op de optie use a device en selecteer je de usb stick waarvan je wil opstarten.</p>
+
+                <figure>
+                    <img src="" alt="Screenshot van windows 10 advanced startup" />
+                    <figcaption>Het windows 10 advanced startup scherm</figcaption>
+                </figure>
+
+
+            </article>
+
+
+        </section>
+
+    </div>
+    <!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+
+
+    <!-- Custom javascript -->
+    <script type="text/javascript">
+        $(document).ready(
+            function() {
+                //mobile nav button extend & collapse
+                $("#nav-btn").click(
+                    function() {
+                        if ($("#nav").hasClass("hidden")) {
+                            $("#nav").removeClass("hidden").addClass("extending");
+                            $("#nav-btn").addClass("active");
+                            setTimeout(function() {
+                                $("#nav").removeClass("extending").addClass("shown");
+                                $("#nav-btn").removeClass("active");
+                            }, 250);
+                        } else if ($("#nav").hasClass("shown")) {
+                            $("#nav").removeClass("shown").addClass("collapsing");
+                            $("#nav-btn").addClass("active");
+                            setTimeout(function() {
+                                $("#nav").removeClass("collapsing").addClass("hidden");
+                                $("#nav-btn").removeClass("active");
+                            }, 250);
+                        }
+                    });
+            })
+    </script>
+</body>
+
+</html>
