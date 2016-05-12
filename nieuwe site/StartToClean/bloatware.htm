@@ -74,7 +74,7 @@
             <p id="verwijderen">Een simpele manier om van bloatware af te geraken is na aankoop van een toestel, het besturing systeem van het toestel opnieuw te installeren of een totaal ander besturings systeem er op zetten. Dit is iets moeilijker bij smartphones dan bij Windows pc’s. Een andere probleem met deze methode is dat die alleen nuttig is bij nieuwe toestellen. Tenzij je de inhoud van de harde schijf niet meer nodig hebt. Op toestellen die u al minstens is een keer heeft gebruikt kan het ook werken maar dan heb je een grootte kans dat je niet alleen de bloatware verwijdert maar ook u persoonlijke bestanden.</p>
             <p id="voorkomen">Er zijn fabrikanten die bloatwareloze toestellen verkopen, maar daar ben je nooit 100% zeker over. Als je een Windows pc wilt, dan kan je die zelf in elkaar steken. Dan ben je heel zeker dat er geen bloatware op zit. Maar als je niet weet hoe je een computer in elkaar moet steken dan kan je een gokje wagen bij een fabrikant met een goede naam op het vlak van bloatware. Bij smartphones is het iets moeilijker. Die kan je moeilijk zelf in elkaar steken. Er zijn weinig smartphones die een volledige stock Android ervaring geven. Als je een stock Android ervaring wilt, probeer dan goedkope merken te voorkomen. De duurdere merken hebben meestal op dat vlak een betere keuze dan de rest.</p>
             <figure>
-                <canvas width="120" height="320" id="android"></canvas>
+                <canvas width="300" height="400" id="android"></canvas>
                 <figcaption>Android robot</figcaption>
             </figure>
             <aside>Meeste bedrijven die hun besturings systeem zelf maken hebben geen bloatware</aside>
@@ -98,7 +98,7 @@
         function(){
             //mobile nav button extend & collapse
             $("#nav-btn").on("click", navKnop);
-            andriod();
+            android();
         });
      
         function navKnop(){
@@ -126,9 +126,72 @@
             var element = $("#android")[0];
             var context = element.getContext('2d');
             var kleur = "#A4C639";
+            var breedte = 250;
+            var hoogte = 300;
+            var bodyBreedte = hoogte/2;
+            var bodyHoogte = hoogte/2;
+            var armBeenBreedte = bodyBreedte / 5;
             
+            //hoofd
             context.beginPath();
             context.fillStyle = kleur;
+            context.arc(breedte/2, hoogte/3, bodyBreedte/2, Math.PI, 0);
+            
+            //lichaam
+            context.rect(breedte/2 - bodyBreedte/2, hoogte/3 + bodyHoogte / 40,bodyBreedte, bodyHoogte);
+            
+            //linker onder hoek
+            context.arc(breedte/2 - bodyBreedte/2 + bodyBreedte / 4, hoogte/3 + bodyHoogte / 40 + bodyBreedte, bodyBreedte / 4, 0, Math.PI);
+            
+            //rechter onder hoek
+            context.arc(breedte/2 - bodyBreedte/2 + bodyBreedte / 4 + bodyBreedte/2, hoogte/3 + bodyHoogte / 40 + bodyBreedte, bodyBreedte / 4, 0, Math.PI);
+            
+            //onderste lichaam
+            context.rect(breedte/2 - bodyBreedte/2 + bodyBreedte / 4, hoogte/3 + bodyHoogte / 40 + bodyBreedte, bodyBreedte/2, bodyBreedte/4); 
+            context.fill();
+            
+            //armen en benen
+            context.beginPath();
+            context.lineWidth = armBeenBreedte;
+            context.lineCap = "round";
+            context.strokeStyle = kleur;
+            
+            
+            //linker been
+            context.moveTo(breedte/2 - bodyBreedte/2 + bodyBreedte / 4, hoogte/3 + bodyHoogte / 40 + bodyBreedte);
+            context.lineTo(breedte/2 - bodyBreedte/2 + bodyBreedte / 4, hoogte/3 + bodyBreedte + bodyBreedte /1.75);
+            context.stroke();
+            
+            //rechter been
+            context.moveTo(breedte/2 - bodyBreedte/2 + bodyBreedte / 4 + bodyBreedte / 2, hoogte/3 + bodyHoogte / 40 + bodyBreedte);
+            context.lineTo(breedte/2 - bodyBreedte/2 + bodyBreedte / 4 + bodyBreedte / 2, hoogte/3 + bodyBreedte + bodyBreedte /1.75);
+            
+            //linker arm
+            context.moveTo(breedte/2 - bodyBreedte/2 - bodyHoogte / 40 - armBeenBreedte/2, hoogte/3 + armBeenBreedte / 2);
+            context.lineTo(breedte/2 - bodyBreedte/2 - bodyHoogte / 40 - armBeenBreedte/2, hoogte/3 + bodyHoogte);
+            
+            //rechter arm
+            context.moveTo(breedte/2 + bodyBreedte/2 + bodyHoogte / 40 + armBeenBreedte/2, hoogte/3 + armBeenBreedte / 2);
+            context.lineTo(breedte/2 + bodyBreedte/2 + bodyHoogte / 40 + armBeenBreedte/2, hoogte/3 + bodyHoogte);
+            context.stroke();
+            
+            //antenes
+            context.beginPath();
+            context.lineWidth = armBeenBreedte / 5;
+            context.moveTo(breedte/2, hoogte/3 - armBeenBreedte);
+            context.lineTo(breedte/3, armBeenBreedte/2);
+            context.moveTo(breedte/2, hoogte/3 - armBeenBreedte);
+            context.lineTo(breedte - breedte/3, armBeenBreedte/2);
+            context.stroke();
+            
+            //ogen
+            context.beginPath();
+            context.fillStyle = "white";
+            context.arc(breedte/4 + breedte /7, hoogte/3 - bodyBreedte/4, bodyBreedte/20, 0, 2*Math.PI);
+            context.arc(breedte - (breedte/4 + breedte /7), hoogte/3 - bodyBreedte/4, bodyBreedte/20, 0, 2*Math.PI);
+            context.fill();
+        
+            
         }
     </script>
   </body>
