@@ -6,6 +6,7 @@
     {
         height: $phone-nav-hoogte;
         font-size: 20px;
+        color: white;
     }
     
     .nav-btn{
@@ -101,10 +102,19 @@
     }
 }
 
+#nav{
+    a{
+        $trans-speed: 0.2s;
+        -webkit-transition: background-color $trans-speed, color $trans-speed;
+        transition: background-color $trans-speed, color $trans-speed;
+    }
+}
+
 @include media-breakpoint-up(lg)
 {
     #nav
     {
+        
         height: 50px;  
         padding: 0px;
         
@@ -134,10 +144,14 @@
             margin-right: 0px;
         }
         
-        
+        .active{
+            color: black;
+            background-color: white;
+        }
         
         a:hover{
             background-color: darken($gray-dark, 25%);
+            color: white;
         }
     }
     .content
