@@ -1,32 +1,72 @@
-<<<<<<< HEAD
 header {
-  padding-top: 70px;
+  margin: 0px;
+  margin-top: 30px;
+  padding-top: 80px;
   padding-bottom: 70px;
   padding: 70px 60px;
   background-color: #E3F2FD;
   color: black;
-  margin: 0px;
 }
 header header h2 {
   text-align: center;
   padding: 10px;
 }
-=======
-header{
-    padding-top:70px ;
-    padding-bottom: 70px;
-    padding: 70px 60px;
-    background-color: #E3F2FD;
-    color: black;
-    margin: 0px;
+
+container {
+  margin: 0px;
+  max-width: auto;
 }
 
-header h2{
-    text-align: center;
-    padding: 10px;
+article {
+  padding: 15px;
 }
-<<<<<<< HEAD
->>>>>>> refs/remotes/origin/master
-=======
->>>>>>> master
->>>>>>> refs/remotes/origin/master
+
+.vakje {
+  position: relative;
+  left: 10%;
+  top: 20%;
+  font-size: 15em;
+}
+
+.kruisje {
+  z-index: 3;
+  color: red;
+  position: relative;
+  font-size: 4em;
+  left: 39%;
+  top: 19%;
+}
+
+.browsers {
+  margin-top: 45px;
+  padding: 10px;
+  background-color: aquamarine;
+  font-size: 4em;
+}
+.browsers i:hover {
+  -webkit-animation-name: draaien;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: draaien;
+  animation-delay: 0s;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.browsers i {
+  text-align: center;
+  padding: 10px;
+}
+
+@keyframes draaien {
+  to {
+    transform: rotate(420deg);
+  }
+}
+canvas {
+  border: 2px solid red;
+}
