@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+header {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding: 70px 60px;
+  background-color: #E3F2FD;
+  color: black;
+  margin: 0px;
+}
+header header h2 {
+  text-align: center;
+  padding: 10px;
+}
+=======
 header{
     padding-top:70px ;
     padding-bottom: 70px;
@@ -11,3 +25,4 @@ header h2{
     text-align: center;
     padding: 10px;
 }
+>>>>>>> master
