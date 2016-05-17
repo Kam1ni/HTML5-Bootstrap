@@ -80,6 +80,20 @@ canvas {
     width: 200px;
     border-radius: 0%;
     background-color: red;
-    transform: rotate(180deg);
+    transform: rotate(360deg);
 }
-
+footer{
+    margin: 0px;
+    background-color: $lightblauw;
+    padding: 30px;
+   -webkit-border-bottom-right-radius: 50px;
+    -webkit-border-bottom-left-radius: 50px;
+    -moz-border-radius-bottomright: 50px;
+    -moz-border-radius-bottomleft: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    *{
+        padding: 10px;
+        text-align: center;
+    }
+}
