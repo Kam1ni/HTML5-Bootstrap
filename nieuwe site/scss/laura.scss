@@ -4,10 +4,7 @@ $margin-top-titel:45px;
 //    background-image: url(../StartToClean/img/headerlaura.jpg);
 //    background-repeat: no-repeat;
 //    background-size: cover;
-container {
-    margin: 0px;
-    max-width: auto;
-}
+
 article {
     padding: 15px;
 }
@@ -82,18 +79,4 @@ canvas {
     background-color: red;
     transform: rotate(360deg);
 }
-footer{
-    margin: 0px;
-    background-color: $lightblauw;
-    padding: 30px;
-   -webkit-border-bottom-right-radius: 50px;
-    -webkit-border-bottom-left-radius: 50px;
-    -moz-border-radius-bottomright: 50px;
-    -moz-border-radius-bottomleft: 50px;
-    border-bottom-right-radius: 50px;
-    border-bottom-left-radius: 50px;
-    *{
-        padding: 10px;
-        text-align: center;
-    }
-}
+

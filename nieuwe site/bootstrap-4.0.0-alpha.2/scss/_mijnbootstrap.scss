@@ -180,7 +180,7 @@ body {
     color: black;
     padding: 20px;
     padding-top: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     -webkit-border-bottom-right-radius: 50px;
     -webkit-border-bottom-left-radius: 50px;
     -moz-border-radius-bottomright: 50px;
@@ -188,7 +188,7 @@ body {
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
 }
-
+//opmaak header
 header {
     text-align: center;
     margin: 0px;
@@ -209,4 +209,21 @@ header {
     -moz-border-radius-bottomleft: 50px;
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
+}
+
+//opmaak footer
+footer{
+    margin: 0px;
+    background-color:$licht-blauw;
+    padding: 20px;
+    -webkit-border-bottom-right-radius: 30px;
+    -webkit-border-bottom-left-radius: 30px;
+    -moz-border-radius-bottomright: 30px;
+    -moz-border-radius-bottomleft: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    text-align: center;
+    div{
+        padding-bottom: 20px;
+    }
 }

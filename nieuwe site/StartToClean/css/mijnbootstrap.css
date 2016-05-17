@@ -6065,7 +6065,7 @@ body {
   color: black;
   padding: 20px;
   padding-top: 0px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   -webkit-border-bottom-right-radius: 50px;
   -webkit-border-bottom-left-radius: 50px;
   -moz-border-radius-bottomright: 50px;
@@ -6093,4 +6093,20 @@ header {
 header header h2 {
   text-align: center;
   padding: 10px;
+}
+
+footer {
+  margin: 0px;
+  background-color: #E3F2FD;
+  padding: 20px;
+  -webkit-border-bottom-right-radius: 30px;
+  -webkit-border-bottom-left-radius: 30px;
+  -moz-border-radius-bottomright: 30px;
+  -moz-border-radius-bottomleft: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  text-align: center;
+}
+footer div {
+  padding-bottom: 20px;
 }
