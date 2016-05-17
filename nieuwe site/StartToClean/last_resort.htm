@@ -31,25 +31,25 @@
 
 
     <nav class="navbar navbar-fixed-top navbar-dark bg-inverse hidden" id="nav">
-        <a class="navbar-brand active" href="#"><img src="img/logo.png" alt="logo" height="30" /></a>
+        <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" height="30" /></a>
         <ul class="nav navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Lid 1 pagina 1</a>
+                <a class="nav-link" href="malware.htm">Malware</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Lid 1 pagina 2</a>
+                <a class="nav-link" href="bloatware.htm">bloatware</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="Verwijderen_malware.htm">Verwijderen Malware</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Last resort</a>
+                <a class="nav-link active" href="#">Last resort</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Lid 3 pagina 1</a>
+                <a class="nav-link" href="preventie.htm">Preventie</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Lid 3 pagina 2</a>
+                <a class="nav-link" href="advies.htm">Advies</a>
             </li>
         </ul>
     </nav>
@@ -58,6 +58,8 @@
 
         <section>
             <article>
+                
+                <div class="col-md-12">
 
                 <h1 id="last_resort">Last resort</h1>
 
@@ -66,10 +68,19 @@
                 <p>Een waarschuwing. Als je niet veel van computers kent is het beter om nu een persoon die iets van computers af weet het over te laten nemen. In sommige instructies die volgen neem ik aan dat je vertrouwd bent met meer geavanceerdere procedures.</p>
 
                 <p>Om dit uit te voeren heb je eerst je gewenste versie van windows (of een ander os indien gewenst.) nodig op verwisselbare media. Meestal zijn installatie cd’s meegeleverd bij aankoop van een computer. Maar indien deze niet bij de hand zijn kan me de iso’s bij microsoft downloaden. De tool van Microsoft kan zowel direct op usb installatie media aanmaken of een iso indien dit gewenst is.</p>
+                
+                </div>                
+                
+                
+                <div class="col-md-12">
 
                 <h2 id="installatiemedia">Aanmaken van installatiemedia</h2>
 
                 <p>Indien je geen installatie cd's hebt dan zul je eerst installatie media moeten aanmaken.</p>
+                
+                </div>
+                
+                <div class="col-md-8">
 
                 <h3>Windows 10:</h3>
                 <p>Download de windows 10 tool <a href="https://www.microsoft.com/en-us/software-download/windows10"> via deze link</a> en voer de executable uit. De setup zal je door het process om een bootable usb stick te loodsen. Zoals eerder aangehaald, kan deze tool ook een iso file maken indien gewenst. In deze gids nemen we aan dat je direct een usb bootable hebt aangemaakt met deze tool.</p>
@@ -79,11 +90,19 @@
                 <p>Voor andere OS'en dan windows 10 zijn er geen tools om direct een usb bootable stick aan te maken zoals met de vorige tool. Dus nu hebben we zowel een iso image nodig van het gewenste OS. Meestal zijn deze te vinden op de site van Microsoft voor windows (vereist een geldige windows key.) of op de site van de linux distributie.</p>
 
                 <p>Dan hebben we ook een tool nodig om van deze iso een bootable usb stick te maken. Hiervoor gebruik ik meestal rufus. Dit is een simpele tool die men op <a href="https://rufus.akeo.ie/">de site van rufus</a> kan vinden. Run de executable die je daar download. En selecteer de gewenste USB en ISO zoals aangegeven in het gegeven voorbeeld. Klik daarna op start en wacht tot het proces gedaan.</p>
+                
+                </div>
 
-                <figure>
-                    <img src="" alt="Screenshot van rufus programma" />
-                    <figcaption>Het rufus programma in gebruik</figcaption>
-                </figure>
+                <div class="col-md-4">
+                   
+                   <canvas width="200" height="400" id="tekening2">
+                       
+                   </canvas>
+                    
+                    
+                </div>
+                
+                <div class="col-md-12">
 
 
                 <h3 id="installatie">Installatie van OS</h3>
@@ -96,6 +115,8 @@
                     <img src="" alt="Screenshot van windows 10 advanced startup" />
                     <figcaption>Het windows 10 advanced startup scherm</figcaption>
                 </figure>
+                
+                </div>
 
 
             </article>
@@ -118,6 +139,7 @@
     <script type="text/javascript">
         $(document).ready(
             function() {
+                tekenen();
                 //mobile nav button extend & collapse
                 $("#nav-btn").click(
                     function() {
@@ -138,6 +160,38 @@
                         }
                     });
             })
+        
+         function tekenen(){
+                var element = $("#tekening2")[0];
+                var context = element.getContext('2d');
+                
+                //STICK
+                context.beginPath();
+                context.fillStyle='blue';
+                context.rect(20,90,150,250);
+                context.fill();
+             
+                context.beginPath();
+             context.fillStyle='gray';
+             context.rect(30,65,126,25);
+             context.fill();
+                 //koper
+                 
+                context.strokeStyle='yellow';
+                context.lineWidth=10;
+
+                 for( i=1; i <=4;i++){
+                     
+                     context.beginPath();
+                     context.moveTo(37 * i,70);
+                     context.lineTo(37 * i,90);
+                     context.stroke();
+                     
+                     
+                 }
+                
+               
+            }
     </script>
 </body>
 
