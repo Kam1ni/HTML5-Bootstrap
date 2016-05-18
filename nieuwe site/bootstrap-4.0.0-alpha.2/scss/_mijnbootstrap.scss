@@ -6,6 +6,7 @@
     $phone-nav-hoogte: 50px;
     #navbar-btn
     {
+        background-color: darken($gray-dark, 25%);
         height: $phone-nav-hoogte;
         font-size: 20px;
         color: white;
@@ -107,16 +108,20 @@
 #nav{
     a{
         $trans-speed: 0.2s;
-        -webkit-transition: background-color $trans-speed, color $trans-speed;
-        transition: background-color $trans-speed, color $trans-speed;
+        -webkit-transition: background-color $trans-speed;
+        transition: background-color $trans-speed;
     }
 }
+
+
+
+//large screen
 
 @include media-breakpoint-up(lg)
 {
     #nav
     {
-        
+        background-color: darken($gray-dark, 25%);
         height: 50px;  
         padding: 0px;
         
@@ -137,6 +142,7 @@
                 
                 a{
                     padding-top: 14px;
+                    color: white;
                 }
              }
         }
@@ -152,8 +158,7 @@
         }
         
         a:hover{
-            background-color: darken($gray-dark, 25%);
-            color: white;
+            background-color: darken($gray-dark, 50%);
         }
     }
     .content

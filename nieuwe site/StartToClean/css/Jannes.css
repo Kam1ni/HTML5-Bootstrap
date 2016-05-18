@@ -2,3 +2,16 @@
     visibility: hidden;
     display: none;
 }
+
+/* transition*/
+
+section .knoppen{
+    padding: 10px;
+    background-color: lightblue;
+    -webkit-transition: background-color 2s; /* Safari */
+    transition: background-color 2s;
+}
+
+.knoppen:hover{
+    background-color: darkblue;
+}

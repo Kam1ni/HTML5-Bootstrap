@@ -5922,6 +5922,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 @media (max-width: 991px) {
   #navbar-btn {
+    background-color: #08528d;
     height: 50px;
     font-size: 20px;
     color: white;
@@ -6005,12 +6006,13 @@ a.bg-danger:focus, a.bg-danger:hover {
   }
 }
 #nav a {
-  -webkit-transition: background-color 0.2s, color 0.2s;
-  transition: background-color 0.2s, color 0.2s;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
 }
 
 @media (min-width: 992px) {
   #nav {
+    background-color: #08528d;
     height: 50px;
     padding: 0px;
   }
@@ -6031,6 +6033,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   }
   #nav ul li a {
     padding-top: 14px;
+    color: white;
   }
   #nav .navbar-brand {
     margin-right: 0px;
@@ -6040,8 +6043,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     background-color: white;
   }
   #nav a:hover {
-    background-color: #08528d;
-    color: white;
+    background-color: #010c14;
   }
 
   .content {
