@@ -1,4 +1,4 @@
-
+//navbar
 
 @include media-breakpoint-down(md) 
 {
@@ -189,11 +189,21 @@ body {
     border-bottom-left-radius: 50px;
 }
 //opmaak header
+article{
+    padding:20px 15px;
+    padding-top: 0px;
+    
+}
+@include media-breakpoint-up(lg) {
+    header{
+        padding-top: 50px;
+    }
+}
 header {
     text-align: center;
     margin: 0px;
     margin-top: 30px;
-    padding-top: 80px;
+    padding-top: 0px;
     padding-bottom: 70px;
     padding: 70px 60px;
     background-color: $licht-blauw;
