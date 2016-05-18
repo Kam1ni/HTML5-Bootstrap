@@ -92,10 +92,11 @@
                 <aside class="hidden-sm-down col-md-6 col-lg-5 ">
                     <figure class="canva">
                         <canvas id="myCanvas" width="200" height="200"></canvas>
+                        <figcaption id="wissen">wissen</figcaption>
                     </figure>
                 </aside>
                 <div class="col-md-6 col-lg-7">
-                    <h2>Mails</h2>
+                    <h2 id="tekenen">Mails</h2>
                     <p>Je heb het vast al eens gehoord. Open nooit een bijlage van een onbekend mailadres. Hiervoor is ook een reden. Deze bijlage kunnen namelijk virussen en andere schadelijke programma’s bevatten. Deze virussen zitten goed verstopt in de bijlage. Zodra je ze opendoet, boem!, een virus heeft zich genesteld in jouw computersysteem. Door deze ene klik is al je geleverde werk om je computer op te ruimen voor niets geweest. Deze methode om virussen te verspreiden wordt heel vaak gebruikt en je moet er dus goed voor oppassen. Ken je het emailadres niet, open de mail dan niet. Verwacht je geen bijlage meegestuurd in een mail, open dan zeker niet de bijlage in je inbox. Open dus alleen mails en bijlagen die je vertrouwt. </p>
                 </div>
             </section>
@@ -192,7 +193,8 @@
 //       script voor canvas
 		$(document).ready(
 			function() {
-			 Tekenen();
+			     $("#tekenen").on("click",Tekenen);
+				$("#wissen").on("click",canvasWissen());
 			}
 		);
 	
