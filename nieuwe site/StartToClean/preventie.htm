@@ -197,9 +197,15 @@
 			}
 		);
 	
+       function canvasWissen() {
+				var $mijnCanvas = $('#mijnCanvas')[0];
+				var context = $mijnCanvas.getContext("2d");
+
+				context.clearRect(0, 0, $mijnCanvas.width, $mijnCanvas.height);
+			}
 	
 		function Tekenen() {
-			
+			canvasWissen();
 			var $mijnCanvas=$("#myCanvas")[0];
 			var context=$mijnCanvas.getContext("2d");
 			var x=20;
