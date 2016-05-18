@@ -51,21 +51,19 @@
                 <a class="nav-link active" href="#">Preventie</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Advies</a>
+                <a class="nav-link" href="advies.htm">Advies</a>
             </li>
         </ul>
     </nav>
 
-    <div class="container">
-
-        <section>
-            <article class="row">
-                <header>
+    <div class="container content">
+        <header>
                     <h2>Preventie tegen virussen </h2>
                     <p>Na uren zwoegen om dat ene irritante virus van je computer te verwijderen, wens je dat je dat nooit meer moet doen. Hiervoor kan je zelf zorgen. Neen, je moet geen honderden muntjes in één of andere Italiaanse fontein gooien om ervoor te zorgen dat deze wens uitkomt. In tegendeel, je kan je een hoop ellende besparen door onderstaande raadgevingen te volgen en je computer virus vrij te houden. </p>
                 </header>
-            </article>
-            <article class="row">
+        <article>
+            
+            <section class="row">
                 <aside class="hidden-sm-down col-md-6 col-lg-5">
                     <figure class="tekening ">
                         <i class="fa fa-check fa-5x" aria-hidden="true"></i>
@@ -77,8 +75,8 @@
                     <h2>Antivirus software</h2>
                     <p> Nog geen antivirus software geïnstalleerd op je computer? Waar wacht je op! Antivirus software is één van de belangrijkste software die je nodig hebt om je computer te beschermen. De software beschermt je, zoals de naam het al zegt, tegen virussen en malware. Het is dus heel belangrijk dat je deze software installeert. Tegenwoordig heb je heel veel verschillende soorten, zowel gratis als betalend in de vorm van een abonnement. Welke moet je dan kiezen? Dit hangt af van je persoonlijke voorkeur. Bij het kiezen van de voor jou juiste antivirus software is google (of een andere zoekmachine) je beste vriend. Zoek informatie op over de verschillende soorten en kies de software waar jij je het beste bij voelt. </p>
                 </div>
-            </article>
-            <article class="row ">
+            </section>
+            <section class="row ">
                 <div class="col-md-6 col-lg-7">
                     <h2>Updates</h2>
                     <p> Je kent het wel, je sluit je computer af (of je start hem op) en er verschijnt op het scherm de boodschap, “Windows update sluit je computer niet af”. Dit komt op het meest ongelegen moment en lijkt dan ook nog eens een eeuwigheid te duren (vooral Windows gebruikers weten waar ik het over heb). Heel irritant! Toch stel je beter deze updates niet uit. Ze zijn nodig om ervoor te zorgen dat alle achterpoortjes van het systeem gesloten blijven. Het is dus heel belangrijk dat je je systeem goed up-to-date houdt. </p>
@@ -89,10 +87,10 @@
                         <figcaption>bescherming tegen malware</figcaption>
                     </figure>
                 </aside>
-            </article>
-            <article class="row">
-                <aside class="hidden-sm-down col-md-6 col-lg-5">
-                    <figure>
+            </section>
+            <section class="row">
+                <aside class="hidden-sm-down col-md-6 col-lg-5 ">
+                    <figure class="canva">
                         <canvas id="myCanvas" width="200" height="200"></canvas>
                     </figure>
                 </aside>
@@ -100,8 +98,8 @@
                     <h2>Mails</h2>
                     <p>Je heb het vast al eens gehoord. Open nooit een bijlage van een onbekend mailadres. Hiervoor is ook een reden. Deze bijlage kunnen namelijk virussen en andere schadelijke programma’s bevatten. Deze virussen zitten goed verstopt in de bijlage. Zodra je ze opendoet, boem!, een virus heeft zich genesteld in jouw computersysteem. Door deze ene klik is al je geleverde werk om je computer op te ruimen voor niets geweest. Deze methode om virussen te verspreiden wordt heel vaak gebruikt en je moet er dus goed voor oppassen. Ken je het emailadres niet, open de mail dan niet. Verwacht je geen bijlage meegestuurd in een mail, open dan zeker niet de bijlage in je inbox. Open dus alleen mails en bijlagen die je vertrouwt. </p>
                 </div>
-            </article>
-            <article class="row ">
+            </section>
+            <section class="row ">
                 <div class="col-md-6 col-lg-7">
                     <h2>Browsers</h2>
                     <p>Een browser is je deur naar het internet. Er zijn verschillende soorten deuren om uit te kiezen. Kies je de standaard houten deur of ga je toch voor de gepantserde stalen deur. Door een houten deur geraak je gemakkelijker binnen dan door een gepantserde deur. Dit geldt ook voor browsers. Niet alle browsers hebben dezelfde kenmerken en zijn even goed beveiligd. Meestal zijn de onbekende en standaard browsers minder snel en minder beveiligd. Opera en Internet Explorer worden om deze reden steeds minder gebruikt. Op dit moment zijn de meest gebruikte browsers “Mozilla Firefox“ en “Google Chrome”. Ze zijn snel en heel goed beschermt. Het spreekt voor zich dat je moet zorgen dat deze browsers altijd up-to-date zijn voor een optimale bescherming van je computer. </p>
@@ -124,8 +122,8 @@
 
                     </figure>
                 </aside>
-            </article>
-        </section>
+            </section>
+        </article>
         <footer>
             <div>
                 <a class="tm col-md-4" href="http://www.thomasmore.be/">thomas more</a>
@@ -199,9 +197,15 @@
 			}
 		);
 	
+       function canvasWissen() {
+				var $mijnCanvas = $('#mijnCanvas')[0];
+				var context = $mijnCanvas.getContext("2d");
+
+				context.clearRect(0, 0, $mijnCanvas.width, $mijnCanvas.height);
+			}
 	
 		function Tekenen() {
-			
+			canvasWissen();
 			var $mijnCanvas=$("#myCanvas")[0];
 			var context=$mijnCanvas.getContext("2d");
 			var x=20;
@@ -224,11 +228,41 @@
 			//rechthoek
 			var blad= new Path2D();
 			blad.rect(x+20, y-20, breedte-40, hoogte);
-			context.fillStyle="#f04c25";
+			context.fillStyle="#53B4FF";
 			context.fill(blad);
-			//virus
-            var virus=new Path2D();
-            virus.moveTo()
+            
+//			//virus invader werkt niet
+//            var virus=new Path2D();
+//            virus.moveTo(x+30,y);
+//            virus.lineTo(x+30+2*stap,y);
+//            virus.lineto(x+30+2*stap,y-stap);
+//            virus.lineTo(x+30+6*stap,y-stap);
+//            virus.lineTo(x+30+6*stap,y);
+//            virus.lineTo(x+30+8*stap,y);
+//            virus.lineTo(x+30+8*stap,y+4*step);
+//            virus.lineTo(x+30+7*stap,y+4*step);
+//            virus.lineTo(x+30+7*stap,y+5*step);
+//            virus.lineTo(x+30+8*stap,y+5*step);
+//            virus.lineTo(x+30+8*stap,y+6*step);
+//            virus.lineTo(x+30+6*stap,y+6*step);
+//            virus.lineTo(x+30+6*stap,y+5*step);
+//            virus.lineTo(x+30+5*stap,y+5*step);
+//            virus.lineTo(x+30+5*stap,y+4*step);
+//            virus.lineTo(x+30+3*stap,y+4*step);
+//            virus.lineTo(x+30+3*stap,y+5*step);
+//            virus.lineTo(x+30+2*stap,y+5*step);
+//            virus.lineTo(x+30+2*stap,y+6*step);
+//            virus.lineTo(x+30+0*stap,y+6*step);
+//            virus.lineTo(x+30+0*stap,y+5*step);
+//            virus.lineTo(x+30+1*stap,y+5*step);
+//            virus.lineTo(x+30+1*stap,y+4*step);
+//            virus.lineTo(x+30+0*stap,y+4*step);
+//            virus.closePath();
+//            context.fillStyle="AFC7FF";
+//            context.fill(virus);
+                
+                    
+            
             
 //            voorkant envalope
             var voorkant=new Path2D();

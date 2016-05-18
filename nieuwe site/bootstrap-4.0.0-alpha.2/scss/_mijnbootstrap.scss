@@ -194,7 +194,7 @@ body {
     border-bottom-left-radius: 50px;
 }
 //opmaak header
-article{
+section{
     padding:20px 15px;
     padding-top: 0px;
     
@@ -206,7 +206,7 @@ article{
 }
 header {
     text-align: center;
-    margin: 0px;
+    margin-bottom: 20px;
     margin-top: 30px;
     padding-top: 0px;
     padding-bottom: 70px;
@@ -240,5 +240,10 @@ footer{
     text-align: center;
     div{
         padding-bottom: 20px;
+        *{
+            margin: 0px;
+            padding: 10px;
+            line-height: 10px;
+        }
     }
 }
