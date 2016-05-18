@@ -10,12 +10,13 @@
     <title>Disc Clean</title>
 
     
-    <!-- Bootstrap core CSS -->
-    <link href="css/mijnbootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/laura.css">
-    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+    <!-- Bootstrap core CSS -->
+    
+    <link href="css/mijnbootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/laura.css">
     
     <!-- favicon -->
     <link rel="icon" type="image/png" href="img/faviconlogo.png" />
@@ -57,17 +58,16 @@
     <div class="container">
 
       <section>
-        <article>
+        <article class="row">
            <header>
                 <h2>perventsie tegen virussen </h2>
                 <p>Na uren zwoegen om dat ene irritante virus van je computer te verwijderen, wens je dat je dat nooit meer moet doen. Hiervoor kan zelf zorgen. Neen, je moet geen honderden muntjes in een of andere italiaanse fontein gooien om ervoor te zorgen dat deze wens uitkomt. In tegendeel, je kan je een hoop ellende besparen door onderstaande raadgevingen te volgen en je computer virus vrij te houden. </p>
             </header>
         </article>
         <article class="row">
-            <aside class="hidden-sm-down col-md-5">
-                <figure>
-                    <img src="" alt="antiverus" />
-                    <figcaption>bescherming tegen malware</figcaption>
+            <aside class="hidden-sm-down col-md-5" >
+                <figure class="tekening">
+                    <i class="fa fa-check antivirus" aria-hidden="true"></i>
                 </figure>
             </aside>
 
@@ -91,8 +91,7 @@
         <article class="row">
             <aside class="hidden-sm-down col-md-5">
                 <figure>
-                    <img src="" alt="antiverus" />
-                    <figcaption>bescherming tegen malware</figcaption>
+                    <canvas id="myCanvas" width="200" height="200"></canvas>
                 </figure>
             </aside>
             <div class= "col-md-7">
@@ -106,9 +105,18 @@
             <p>Een browser is je deur naar het internet. Er zijn verschillende soorten deuren om uit te kiezen. Kies je de standaard houten deur of ga je toch voor de gepantserde stalen deur. Door een houten deur geraak je gemakkelijker binnen dan door een gepantserde deur. Dit geldt ook voor browsers. Niet alle browsers hebben dezelfde kenmerken en zijn even goed beveiligd. Meestal zijn de onbekende en standaard browsers minder snel en minder beveiligd. Opera en Internet Explorer worden om deze reden steeds minder gebruikt. Op dit moment zijn de meest gebruikte browsers “Mozilla Firefox“ en “Google Chrome”. Ze zijn snel en heel goed beschermt. Het spreekt voor zich dat je moet zorgen dat deze browsers altijd up-to-date zijn voor een optimale bescherming van je computer. </p>
             </div>
             <aside class="hidden-sm-down col-md-5">
-                <figure >
-                    <img src="" alt="antiverus" />
+                <figure>
+                   <div class="browsers">
+                   
+                    <i class="fa fa-chrome logo logo1 " id="lala" aria-hidden="true"></i>
+                    <i class="fa fa-firefox logo logo2 " aria-hidden="true"></i>
+                    <i class="fa fa-internet-explorer logo " aria-hidden="true"></i>
+                    <i class="fa fa-edge logo logo4 " aria-hidden="true"></i>
+                    <i class="fa fa-opera logo logo5 " aria-hidden="true"></i>
+                    <i class="fa fa-safari logo logo6 " aria-hidden="true"></i>
+                    </div>
                     <figcaption>bescherming tegen malware</figcaption>
+                    
                 </figure>
             </aside>
         </article>
@@ -124,6 +132,53 @@
  
  
  <!-- Custom javascript -->
+ <script   src="https://code.jquery.com/jquery-2.2.3.js"   integrity="sha256
+    -laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
+    <script>
+        <script>
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+
+</script>  
+    </script>
+    <script>
+    $(document).ready
+        (function () {
+            var count = 0;
+
+            $('.logo').click(function () {
+                count += 1;
+                kleurregelen();
+
+                    if (count == 3) {
+                            alert("is het leuk?")
+                    }
+                    if (count == 10) {
+                            alert("ik denk het wel")
+                    }
+                    if (count == 15) {
+                            alert("ok genoeg gespeelt")
+                    }
+                    if (count == 19) {
+                            alert("laatste waarschuwing")
+                    }
+                    if (count == 20) {
+                            alert("ik heb je gewaarschuwt, het is gedaan")
+                    $(".logo").css("color",'#ffffff');
+        }
+        
+            });
+        })();
+    function kleurregelen(){
+        var kleur= 'rgb('
+            + (Math.floor(Math.random() * 256)) + ','
+            + (Math.floor(Math.random() * 256)) + ','
+            + (Math.floor(Math.random() * 256)) + ')';
+        $(".logo").css("color",kleur);
+    }
+ 
+    </script>
+    
  <script type="text/javascript">
         $(document).ready(
         function(){
@@ -146,8 +201,9 @@
                         $("#nav-btn").removeClass("active");
                     }, 250);
                 }
-                });
+            });
         })
     </script>
+   
   </body>
 </html>
