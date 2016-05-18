@@ -21,6 +21,8 @@
     <link rel="icon" type="image/png" href="img/faviconlogo.png" />
     <!-- Custom styles for this template -->
     <!--<link href="starter-template.css" rel="stylesheet">-->
+    
+    <link href="css/Jannes.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -55,11 +57,8 @@
     </nav>
 
     <div class="container content">
-
-        <section>
-            <article>
                 
-                <div class="col-md-12">
+                <header class="col-md-12">
 
                 <h1 id="last_resort">Last resort</h1>
 
@@ -69,20 +68,20 @@
 
                 <p>Om dit uit te voeren heb je eerst je gewenste versie van windows (of een ander os indien gewenst.) nodig op verwisselbare media. Meestal zijn installatie cd’s meegeleverd bij aankoop van een computer. Maar indien deze niet bij de hand zijn kan me de iso’s bij microsoft downloaden. De tool van Microsoft kan zowel direct op usb installatie media aanmaken of een iso indien dit gewenst is.</p>
                 
-                </div>                
+                </header>                
                 
-                
-                <div class="col-md-12">
+                <article>
+                <section class="col-md-12">
 
                 <h2 id="installatiemedia">Aanmaken van installatiemedia</h2>
 
                 <p>Indien je geen installatie cd's hebt dan zul je eerst installatie media moeten aanmaken.</p>
                 
-                </div>
+                </section>
                 
-                <div class="col-md-8">
+                <section class="col-md-8 extend">
 
-                <h3>Windows 10:</h3>
+                <h3 class="chide">Windows 10:</h3>
                 <p>Download de windows 10 tool <a href="https://www.microsoft.com/en-us/software-download/windows10"> via deze link</a> en voer de executable uit. De setup zal je door het process om een bootable usb stick te loodsen. Zoals eerder aangehaald, kan deze tool ook een iso file maken indien gewenst. In deze gids nemen we aan dat je direct een usb bootable hebt aangemaakt met deze tool.</p>
 
                 <h3>windows 8.1/7/ lager of een linux systeem.</h3>
@@ -91,18 +90,18 @@
 
                 <p>Dan hebben we ook een tool nodig om van deze iso een bootable usb stick te maken. Hiervoor gebruik ik meestal rufus. Dit is een simpele tool die men op <a href="https://rufus.akeo.ie/">de site van rufus</a> kan vinden. Run de executable die je daar download. En selecteer de gewenste USB en ISO zoals aangegeven in het gegeven voorbeeld. Klik daarna op start en wacht tot het proces gedaan.</p>
                 
-                </div>
+                </section>
 
-                <div class="col-md-4">
+                <section class="col-md-4" id="tekening1">
                    
                    <canvas width="200" height="400" id="tekening2">
                        
                    </canvas>
                     
                     
-                </div>
+                </section>
                 
-                <div class="col-md-12">
+                <section class="col-md-12">
 
 
                 <h3 id="installatie">Installatie van OS</h3>
@@ -116,15 +115,21 @@
                     <figcaption>Het windows 10 advanced startup scherm</figcaption>
                 </figure>
                 
-                </div>
-
-
-            </article>
-
-
-        </section>
-
+                </section>
+                </article>
+                
+        <footer>
+       <div>
+        <a class="tm col-md-4" href="http://www.thomasmore.be/">thomas more</a>
+        <p class="col-md-4">author: Lauwers Jannes</p>
+        <a class="wb col-md-4" href="../../startbootstrap-stylish-portfolio-v4%2520enkele%2520fotos%2520aangepast/index.html">webBusters</a>
+        </div>
+        </footer>
     </div>
+
+
+    
+    
     <!-- /.container -->
 
 
@@ -159,7 +164,22 @@
                             }, 250);
                         }
                     });
+                $(".chide").on("click",hidden);
             })
+        
+        function hidden(){
+            
+            if($("#tekening1").hasClass("verborgen")){
+                $("#tekening1").removeClass("verborgen");
+                $(".extend").removeClass("col-md-12");
+                $(".extend").addClass("col-md-8");
+            }
+            else{
+                $(".extend").addClass("col-md-12");
+                $(".extend").removeClass("col-md-8");
+                $("#tekening1").addClass("verborgen");
+                }
+        }
         
          function tekenen(){
                 var element = $("#tekening2")[0];
@@ -173,7 +193,7 @@
              
                 context.beginPath();
              context.fillStyle='gray';
-             context.rect(30,65,126,25);
+             context.rect(30,55,126,35);
              context.fill();
                  //koper
                  
