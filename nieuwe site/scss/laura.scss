@@ -1,14 +1,82 @@
-header {
-    padding-top: 70px;
-    padding-bottom: 70px;
-    padding: 70px 60px;
-    background-color: #E3F2FD;
-    color: black;
-    margin: 0px;
-    header h2 
-    {
+$lightblauw:#E3F2FD;
+$margin-top-titel:45px;
+//    achtergrond invoegen
+//    background-image: url(../StartToClean/img/headerlaura.jpg);
+//    background-repeat: no-repeat;
+//    background-size: cover;
+
+article {
+    padding: 15px;
+}
+
+
+.browsers {
+    align-content: center;
+    margin-top: 45px;
+    padding: 10px;
+    background-color: inherit;
+    font-size: 4em;
+    i:hover {
+        -webkit-animation-name: draaien;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-fill-mode: forwards;
+        animation-name: draaien;
+        animation-delay: 0s;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+    i {
         text-align: center;
         padding: 10px;
     }
+}
+@keyframes draaien {
+    to {
+        transform: rotate(360deg);
+    }
+}
+canvas {
+    border: 2px solid red;
+}
+.tekening {
+    text-align: center;
+    color: white;
+    background-color: green;
+    margin: $margin-top-titel 22%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    background-color: green;
+    -webkit-transition:border-radius 2s,
+    background-color 2s,
+    transform 2s;
+    transition: border-radius 2s,
+    background-color 2s,
+    transform 2s;
+    padding:13%;
+}
+
+
+//verandering van icoon
+.tekening .fa-times,
+.tekening:hover .fa-check {
+    display: none;
+}
+.tekening:hover .fa-times {
+    display: block;
+}
+.tekening:hover {
+    height: 200px;
+    width: 200px;
+    border-radius: 0%;
+    background-color: red;
+    transform: rotate(360deg);
 }
 
