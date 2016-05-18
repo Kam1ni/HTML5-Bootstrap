@@ -1,15 +1,8 @@
-.container {
-  padding-bottom: 20px;
-}
-
-article {
-  padding: 15px;
-}
-
 .browsers {
   align-content: center;
   margin-top: 45px;
-  padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
   background-color: inherit;
   font-size: 4em;
 }
@@ -31,6 +24,13 @@ article {
   text-align: center;
   padding: 10px;
 }
+.browsers div {
+  text-align: center;
+}
+
+figcaption {
+  text-align: center;
+}
 
 @keyframes draaien {
   to {
@@ -43,6 +43,7 @@ canvas {
 
 .tekening {
   text-align: center;
+  position: relative;
   color: white;
   background-color: green;
   margin: 45px 22%;
@@ -52,9 +53,14 @@ canvas {
   height: 200px;
   width: 200px;
   background-color: green;
-  -webkit-transition: border-radius 2s, background-color 2s, transform 2s;
-  transition: border-radius 2s, background-color 2s, transform 2s;
-  padding: 13%;
+  -webkit-transition: border-radius 2s,background-color 2s,transform 2s;
+  transition: border-radius 2s, background-color 2s,transform 2s;
+}
+.tekening i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .tekening .fa-times,
@@ -69,23 +75,7 @@ canvas {
 .tekening:hover {
   height: 200px;
   width: 200px;
-  border-radius: 0%;
+  border-radius: 10%;
   background-color: red;
   transform: rotate(360deg);
-}
-
-footer {
-  margin: 0px;
-  background-color: #E3F2FD;
-  padding: 20px;
-  -webkit-border-bottom-right-radius: 30px;
-  -webkit-border-bottom-left-radius: 30px;
-  -moz-border-radius-bottomright: 30px;
-  -moz-border-radius-bottomleft: 30px;
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-  text-align: center;
-}
-footer div {
-  padding-bottom: 20px;
 }
