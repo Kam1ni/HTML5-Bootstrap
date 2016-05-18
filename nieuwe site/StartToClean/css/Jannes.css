@@ -5,7 +5,7 @@
 
 /* transition*/
 
-section .knoppen{
+.knoppen{
     padding: 10px;
     background-color: lightblue;
     -webkit-transition: background-color 2s; /* Safari */
