@@ -90,9 +90,12 @@
             </section>
             <section class="row">
                 <aside class="hidden-sm-down col-md-6 col-lg-5 ">
-                    <figure class="canva">
+                    <figure class="canva" id=wissen>
                         <canvas id="myCanvas" width="200" height="200"></canvas>
-                        <figcaption id="wissen">wissen</figcaption>
+                        <div>
+                        <button id="tekenen" ></button>
+                        <button id="tekenen">wissen</button>
+                        </div>
                     </figure>
                 </aside>
                 <div class="col-md-6 col-lg-7">
@@ -194,7 +197,7 @@
 		$(document).ready(
 			function() {
 			     $("#tekenen").on("click",Tekenen);
-				$("#wissen").on("click",canvasWissen());
+				$("#wissen").on("click",canvasWissen);
 			}
 		);
 	
