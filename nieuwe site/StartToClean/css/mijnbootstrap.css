@@ -6108,7 +6108,7 @@ header {
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 50px;
 }
-header header h2 {
+header header h1 {
   text-align: center;
   padding: 10px;
 }
@@ -6132,6 +6132,10 @@ footer div * {
   margin: 0px;
   padding: 10px;
   line-height: 10px;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
 }
 
 @media (min-width: 1200px) {
