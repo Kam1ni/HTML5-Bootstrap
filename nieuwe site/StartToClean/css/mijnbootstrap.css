@@ -5922,6 +5922,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 @media (max-width: 991px) {
   #navbar-btn {
+    background-color: #08528d;
     height: 50px;
     font-size: 20px;
     color: white;
@@ -6005,14 +6006,21 @@ a.bg-danger:focus, a.bg-danger:hover {
   }
 }
 #nav a {
-  -webkit-transition: background-color 0.2s, color 0.2s;
-  transition: background-color 0.2s, color 0.2s;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
 }
 
 @media (min-width: 992px) {
   #nav {
+    background-color: #08528d;
     height: 50px;
     padding: 0px;
+  }
+  #nav .nav-center {
+    width: 940px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
   #nav a {
     height: 100%;
@@ -6031,6 +6039,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   }
   #nav ul li a {
     padding-top: 14px;
+    color: white;
   }
   #nav .navbar-brand {
     margin-right: 0px;
@@ -6040,8 +6049,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     background-color: white;
   }
   #nav a:hover {
-    background-color: #08528d;
-    color: white;
+    background-color: #010c14;
   }
 
   .content {
@@ -6065,11 +6073,72 @@ body {
   color: black;
   padding: 20px;
   padding-top: 0px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   -webkit-border-bottom-right-radius: 50px;
   -webkit-border-bottom-left-radius: 50px;
   -moz-border-radius-bottomright: 50px;
   -moz-border-radius-bottomleft: 50px;
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 50px;
+}
+
+section {
+  padding: 20px 15px;
+  padding-top: 0px;
+}
+
+@media (min-width: 992px) {
+  header {
+    padding-top: 50px;
+  }
+}
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  padding-top: 0px;
+  padding-bottom: 70px;
+  padding: 70px 60px;
+  background-color: #E3F2FD;
+  color: black;
+  -webkit-border-bottom-right-radius: 50px;
+  -webkit-border-bottom-left-radius: 50px;
+  -moz-border-radius-bottomright: 50px;
+  -moz-border-radius-bottomleft: 50px;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+header header h2 {
+  text-align: center;
+  padding: 10px;
+}
+
+footer {
+  margin: 0px;
+  background-color: #84c6f6;
+  padding: 20px;
+  -webkit-border-bottom-right-radius: 30px;
+  -webkit-border-bottom-left-radius: 30px;
+  -moz-border-radius-bottomright: 30px;
+  -moz-border-radius-bottomleft: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  text-align: center;
+}
+footer div {
+  padding-bottom: 20px;
+}
+footer div * {
+  margin: 0px;
+  padding: 10px;
+  line-height: 10px;
+}
+
+@media (min-width: 1200px) {
+  #nav .nav-center {
+    width: 1140px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
