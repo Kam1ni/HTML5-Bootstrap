@@ -219,11 +219,12 @@ header {
     padding: 70px 60px;
     background-color: $licht-blauw;
     color: black;
-    header h2 { 
+    header h1 { 
         text-align: center;
         padding: 10px;
         
     }
+    
       -webkit-border-bottom-right-radius: 50px;
     -webkit-border-bottom-left-radius: 50px;
     -moz-border-radius-bottomright: 50px;
@@ -252,6 +253,10 @@ footer{
             line-height: 10px;
         }
     }
+}
+//lettertype toevoegen
+h1{
+    font-family: 'Oswald', sans-serif;
 }
 
 @include media-breakpoint-up(xl)
