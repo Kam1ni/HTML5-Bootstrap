@@ -121,6 +121,12 @@
 {
     #nav
     {
+        .nav-center{
+            width: 940px;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
         background-color: darken($gray-dark, 25%);
         height: 50px;  
         padding: 0px;
@@ -194,7 +200,7 @@ body {
     border-bottom-left-radius: 50px;
 }
 //opmaak header
-article{
+section{
     padding:20px 15px;
     padding-top: 0px;
     
@@ -206,7 +212,7 @@ article{
 }
 header {
     text-align: center;
-    margin: 0px;
+    margin-bottom: 20px;
     margin-top: 30px;
     padding-top: 0px;
     padding-bottom: 70px;
@@ -229,7 +235,7 @@ header {
 //opmaak footer
 footer{
     margin: 0px;
-    background-color:$licht-blauw;
+    background-color: darken($licht-blauw, 20%);
     padding: 20px;
     -webkit-border-bottom-right-radius: 30px;
     -webkit-border-bottom-left-radius: 30px;
@@ -240,5 +246,23 @@ footer{
     text-align: center;
     div{
         padding-bottom: 20px;
+        *{
+            margin: 0px;
+            padding: 10px;
+            line-height: 10px;
+        }
+    }
+}
+
+@include media-breakpoint-up(xl)
+{
+    #nav
+    {
+        .nav-center{
+            width: 1140px;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }

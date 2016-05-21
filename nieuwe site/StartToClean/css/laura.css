@@ -37,6 +37,11 @@ figcaption {
     transform: rotate(360deg);
   }
 }
+.canva {
+  text-align: center;
+  margin-top: 45px;
+}
+
 canvas {
   border: 2px solid red;
 }

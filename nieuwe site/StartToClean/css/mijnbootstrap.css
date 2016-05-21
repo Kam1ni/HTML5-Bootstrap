@@ -6016,6 +6016,12 @@ a.bg-danger:focus, a.bg-danger:hover {
     height: 50px;
     padding: 0px;
   }
+  #nav .nav-center {
+    width: 940px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   #nav a {
     height: 100%;
     padding-left: 16px;
@@ -6076,7 +6082,7 @@ body {
   border-bottom-left-radius: 50px;
 }
 
-article {
+section {
   padding: 20px 15px;
   padding-top: 0px;
 }
@@ -6088,7 +6094,7 @@ article {
 }
 header {
   text-align: center;
-  margin: 0px;
+  margin-bottom: 20px;
   margin-top: 30px;
   padding-top: 0px;
   padding-bottom: 70px;
@@ -6109,7 +6115,7 @@ header header h2 {
 
 footer {
   margin: 0px;
-  background-color: #E3F2FD;
+  background-color: #84c6f6;
   padding: 20px;
   -webkit-border-bottom-right-radius: 30px;
   -webkit-border-bottom-left-radius: 30px;
@@ -6121,4 +6127,18 @@ footer {
 }
 footer div {
   padding-bottom: 20px;
+}
+footer div * {
+  margin: 0px;
+  padding: 10px;
+  line-height: 10px;
+}
+
+@media (min-width: 1200px) {
+  #nav .nav-center {
+    width: 1140px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
