@@ -5929,6 +5929,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   }
 
   #nav {
+    overflow-y: scroll;
     background-color: #373a3c;
     padding: 0px;
     height: 100%;
@@ -5969,6 +5970,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   }
 
   .hidden {
+    left: -200px;
     display: none;
   }
 
@@ -6003,6 +6005,17 @@ a.bg-danger:focus, a.bg-danger:hover {
     to {
       left: -200px;
     }
+  }
+  .content {
+    width: 100%;
+    display: table;
+  }
+  .content img {
+    width: 100%;
+  }
+
+  .svglogo {
+    transform: scale(0.5, 0.5);
   }
 }
 #nav a {
