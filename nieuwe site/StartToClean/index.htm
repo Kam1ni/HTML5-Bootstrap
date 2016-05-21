@@ -62,7 +62,14 @@
       <div class="starter-template">
         <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-        
+        <svg class="svglogo" width="200" height="200">
+            <circle cx="100" cy="100" r="100" fill="black"/>
+            <circle cx="100" cy="100" r="70" fill="white"/>
+            <line x1="96" Y1="0" x2="96" Y2="200" stroke="white" stroke-width="8"/>
+            <rect width="34" height="170" x="100" y="20" fill="black"/>
+            <circle cx="100" cy="100" r="30" fill="black"/>
+            <circle cx="100" cy="100" r="16" fill="white"/>
+        </svg>
       </div>
       <footer>
        <div>
@@ -83,10 +90,12 @@
  
  <!-- Custom javascript -->
  <script type="text/javascript">
+     var activeTeller = 0;
         $(document).ready(
         function(){
             //mobile nav button extend & collapse
             $("#nav-btn").on("click", navKnop);
+            $(".svglogo").on("click", navBericht);
         });
      
         function navKnop(){
@@ -107,7 +116,15 @@
                         $("#nav-btn").removeClass("active");
                     }, 250);
                 }
-        };
+        }
+     
+     function navBericht(){
+         activeTeller++;
+         if (activeTeller >= 3){
+             alert("Ik weet het. Mooie logo.");
+             activeTeller = 0;
+         }
+     }
      
     </script>
   </body>
