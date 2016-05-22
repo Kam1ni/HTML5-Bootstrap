@@ -105,7 +105,7 @@
                 
                 <section class="col-md-12">
                    
-                   <video height="240" width="480"> Video tag niet gesupport door uw browser
+                   <video height="480" width="880" controls> Video tag niet gesupport door uw browser
                        <source src="video/VideoRufusWeb.mp4" type="video/mp4">
                        <source src="video/VideoRufusWeb.ogv" type="video/ogv">
                        <source src="video/VideoRufusWeb.webm" type="video/webm">
@@ -153,7 +153,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
     <script> 
         window.onload = function(){
-            TweenMax.from("#tekening1",8,{opacity:0,scale:0,ease:Bounce.easeOut});
+            TweenMax.from("#tekening1",2,{opacity:0,scale:0,ease:Bounce.easeOut});
         }
     </script>
 
@@ -163,6 +163,13 @@
             function() {
                 tekenen();
                 //mobile nav button extend & collapse
+                $(".tm").on("click",function(exit){
+                    var r=confirm("Wilt u de site verlaten?");
+            
+                    if(r == false){
+                        exit.preventDefault();
+                    }
+                });
                 $("#nav-btn").click(
                     function() {
                         if ($("#nav").hasClass("hidden")) {
@@ -190,11 +197,13 @@
                 $("#tekening1").removeClass("verborgen");
                 $(".extend").removeClass("col-md-12");
                 $(".extend").addClass("col-md-8");
+                TweenMax.from("#tekening1",2,{opacity:0,scale:0,ease:Power0.easeOut});
             }
             else{
                 $(".extend").addClass("col-md-12");
                 $(".extend").removeClass("col-md-8");
-                $("#tekening1").addClass("verborgen");
+                $("#tekening1").addClass("verborgen");              
+                
                 }
         }
         
