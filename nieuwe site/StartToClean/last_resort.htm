@@ -104,6 +104,18 @@
                 </section>
                 
                 <section class="col-md-12">
+                   
+                   <video height="240" width="480"> Video tag niet gesupport door uw browser
+                       <source src="video/VideoRufusWeb.mp4" type="video/mp4">
+                       <source src="video/VideoRufusWeb.ogv" type="video/ogv">
+                       <source src="video/VideoRufusWeb.webm" type="video/webm">
+                   </video>
+                    
+                    
+                    
+                </section>
+                
+                <section class="col-md-12">
 
 
                 <h3 id="installatie">Installatie van OS</h3>
@@ -136,7 +148,13 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
-
+    <!-- Scripts Greensock -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script> 
+        window.onload = function{
+            TweenMax.from("#tekening1",10,{left:300});
+        }
+    </script>
 
     <!-- Custom javascript -->
     <script type="text/javascript">
@@ -211,6 +229,8 @@
                
             }
     </script>
+    
+    
 </body>
 
 </html>
