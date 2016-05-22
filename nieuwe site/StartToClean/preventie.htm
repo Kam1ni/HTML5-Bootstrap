@@ -86,9 +86,8 @@
                     <p> Je kent het wel, je sluit je computer af (of je start hem op) en er verschijnt op het scherm de boodschap, “Windows update sluit je computer niet af”. Dit komt op het meest ongelegen moment en lijkt dan ook nog eens een eeuwigheid te duren (vooral Windows gebruikers weten waar ik het over heb). Heel irritant! Toch stel je beter deze updates niet uit. Ze zijn nodig om ervoor te zorgen dat alle achterpoortjes van het systeem gesloten blijven. Het is dus heel belangrijk dat je je systeem goed up-to-date houdt. </p>
                 </div>
                 <aside class="hidden-sm-down col-md-6 col-lg-5">
-                    <figure>
-                        <img src="" alt="antiverus" />
-                        <figcaption>bescherming tegen malware</figcaption>
+                    <figure class="update">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
                     </figure>
                 </aside>
             </section>
@@ -97,8 +96,8 @@
                     <figure class="canva">
                         <canvas id="Canvas" width="200" height="200"></canvas>
                         <div>
-                        <button id="wissen">wissen</button>
-                        <button id="tekenen" >tekenen</button>
+                        <button id="wissen" class="btn btn-primary">wissen</button>
+                        <button id="tekenen" class="btn btn-primary">tekenen</button>
                         
                         </div>
                     </figure>
@@ -166,20 +165,21 @@
                 kleurregelen();
 
                 if (count == 3) {
-                    alert("is het leuk?")
+                    alert("is het leuk?");
                 }
                 if (count == 10) {
-                    alert("ik denk het wel")
+                    alert("ik denk het wel");
                 }
                 if (count == 15) {
-                    alert("ok genoeg gespeelt")
+                    alert("Ik denk dat je niet zomaar op alles moet klikken");
                 }
                 if (count == 19) {
-                    alert("laatste waarschuwing")
+                    alert("laatste waarschuwing");
                 }
                 if (count == 20) {
-                    alert("ik heb je gewaarschuwt, het is gedaan")
+                    alert("ik heb je gewaarschuwt, nu het is gedaan");
                     $(".logo").css("color", '#ffffff');
+                    rommel();
                 }
 
             });
@@ -187,9 +187,10 @@
 
         function kleurregelen() {
             var kleur = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
-            $(".logo").css("color", kleur);
         }
-
+        
+     
+       
     </script>
 
    <script>
@@ -202,7 +203,6 @@
       
 	
 		function Tekenen() {
-            alert("hoi")
 			var mijnCanvas=$("#Canvas")[0];
 			var context=mijnCanvas.getContext("2d");
 			var x=20;
@@ -212,7 +212,7 @@
             var stap=10;
 			var startx=40;
 			//ruit
-            alert ("lala")
+            
 			var ruit=new Path2D();
 			ruit.moveTo(x,y);
 			ruit.lineTo(x+breedte/2,y-hoogte/2);
@@ -241,37 +241,20 @@
             context.fillStyle="#F0E3D7";
             context.fill(voorkant);
             
-            alert("virus")
-			//virus invader werkt niet
+            
+            //virus met for
+            var posx =[20,20,60,60,80,80,70,70,80,80,60,60,50,50,30,30,20,20,0,0,10,10,0];
+            var posy =[0,-10,-10,0,0,40,40,50,50,60,60,50,50,40,40,50,50,60,60,50,50,40,40];
             var virus=new Path2D();
             virus.moveTo(x+startx, y);
-            virus.lineTo(x+startx+20, y);
-            virus.lineTo(x+startx+20, y-10);
-            virus.lineTo(x+startx+60, y-10);
-            virus.lineTo(x+startx+60, y);
-            virus.lineTo(x+startx+80, y);
-            virus.lineTo(x+startx+80, y+40);
-            virus.lineTo(x+startx+70, y+40);
-            virus.lineTo(x+startx+70, y+50);
-            virus.lineTo(x+startx+80, y+50);
-            virus.lineTo(x+startx+80, y+60);
-            virus.lineTo(x+startx+60, y+60);
-            virus.lineTo(x+startx+60, y+50);
-            virus.lineTo(x+startx+50, y+50);
-            virus.lineTo(x+startx+50, y+40);
-            virus.lineTo(x+startx+30, y+40);
-            virus.lineTo(x+startx+30, y+50);
-            virus.lineTo(x+startx+20, y+50);
-            virus.lineTo(x+startx+20, y+60);
-            virus.lineTo(x+startx, y+60);
-            virus.lineTo(x+startx, y+50);
-            virus.lineTo(x+startx+10, y+50);
-            virus.lineTo(x+startx+10, y+40);
-            virus.lineTo(x+startx, y+40);
+            for (i = 0; i < posx.length; i++) { 
+                virus.lineTo(x+startx+posx[i], y+posy[i]);
+                }
             virus.closePath();
             context.fillStyle="#31B815";
             context.fill(virus);
             
+			            
             
             var oog =new Path2D();
             oog.moveTo(x+startx +10, y+10);
@@ -294,7 +277,6 @@
 			
 		}
         function wissen() {
-           alert ("wissen")
            var element=$("#Canvas")[0];
 			var context=element.getContext("2d");
                 context.clearRect(0, 0, element.width,element.height);
