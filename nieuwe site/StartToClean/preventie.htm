@@ -202,7 +202,6 @@
       
 	
 		function Tekenen() {
-            alert("hoi")
 			var mijnCanvas=$("#Canvas")[0];
 			var context=mijnCanvas.getContext("2d");
 			var x=20;
@@ -212,7 +211,7 @@
             var stap=10;
 			var startx=40;
 			//ruit
-            alert ("lala")
+            
 			var ruit=new Path2D();
 			ruit.moveTo(x,y);
 			ruit.lineTo(x+breedte/2,y-hoogte/2);
@@ -240,6 +239,19 @@
             voorkant.closePath();
             context.fillStyle="#F0E3D7";
             context.fill(voorkant);
+            
+            
+            //virus met for
+            var posx =[20,20,60,60,80,80,70,70,80,80,60,60,50,50,30,30,20,20,0,0,10,10,0];
+            var posy =[0,-10,-10,0,0,40,40,50,50,60,60,50,50,40,40,50,50,60,60,50,50,40,40];
+            var virus=new Path2D();
+            virus.moveTo(x+startx, y);
+            for (i = 0; i < posx.length; i++) { 
+                virus.lineTo(x+startx+posx[i], y+posy[i]);
+                }
+            virus.closePath();
+            context.fillStyle="#31B815";
+            context.fill(virus);
             
             alert("virus")
 			//virus invader werkt niet
@@ -294,7 +306,6 @@
 			
 		}
         function wissen() {
-           alert ("wissen")
            var element=$("#Canvas")[0];
 			var context=element.getContext("2d");
                 context.clearRect(0, 0, element.width,element.height);

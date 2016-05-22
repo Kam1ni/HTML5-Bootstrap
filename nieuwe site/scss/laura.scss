@@ -5,10 +5,10 @@ $margin-top-titel:45px;
 //    background-repeat: no-repeat;
 //    background-size: cover;
 
+
 //draaien iconen browsers
 .browsers {
     align-content: center;
-    margin-top: 45px;
     margin-right: auto;
     margin-left: auto;
     background-color: inherit;
@@ -49,10 +49,12 @@ figcaption{
 
 .canva{
     text-align: center;
-    margin-top: $margin-top-titel;
 }
 canvas {
-    border: 2px solid red;
+    border: 2px solid #84c6f6 ;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    border-radius: 10%;
 }
 
 
@@ -61,8 +63,9 @@ canvas {
     text-align: center;
     position: relative;
     color: white;
+    margin-right:auto;
+    margin-left: auto;
     background-color: green;
-    margin: $margin-top-titel 22%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -105,3 +108,15 @@ canvas {
 }
 
 
+//defragmenteren video
+.defrag{
+    margin-top: $margin-top-titel;
+    p{font-size: 0.9em}
+}
+
+aside{
+    margin-top: $margin-top-titel;
+}
+.uitleg{
+    display: none;
+}

@@ -1,6 +1,5 @@
 .browsers {
   align-content: center;
-  margin-top: 45px;
   margin-right: auto;
   margin-left: auto;
   background-color: inherit;
@@ -39,19 +38,22 @@ figcaption {
 }
 .canva {
   text-align: center;
-  margin-top: 45px;
 }
 
 canvas {
-  border: 2px solid red;
+  border: 2px solid #84c6f6;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  border-radius: 10%;
 }
 
 .tekening {
   text-align: center;
   position: relative;
   color: white;
+  margin-right: auto;
+  margin-left: auto;
   background-color: green;
-  margin: 45px 22%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -90,4 +92,19 @@ canvas {
 }
 .backup i {
   font-size: 8em;
+}
+
+.defrag {
+  margin-top: 45px;
+}
+.defrag p {
+  font-size: 0.9em;
+}
+
+aside {
+  margin-top: 45px;
+}
+
+.uitleg {
+  display: none;
 }
