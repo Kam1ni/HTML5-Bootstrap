@@ -148,11 +148,12 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
-    <!-- Scripts Greensock -->
+    
+    <!--CDN link for  TweenMax-->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
     <script> 
-        window.onload = function{
-            TweenMax.from("#tekening1",10,{left:300});
+        window.onload = function(){
+            TweenMax.from("#tekening1",8,{opacity:0,scale:0,ease:Bounce.easeOut});
         }
     </script>
 
