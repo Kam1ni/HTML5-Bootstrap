@@ -84,3 +84,10 @@ canvas {
   background-color: red;
   transform: rotate(360deg);
 }
+
+.backup {
+  text-align: center;
+}
+.backup i {
+  font-size: 8em;
+}

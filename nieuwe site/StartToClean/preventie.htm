@@ -23,6 +23,8 @@
     <link rel="icon" type="image/png" href="img/faviconlogo.png" />
     <!-- Custom styles for this template -->
     <!--<link href="starter-template.css" rel="stylesheet">-->
+    <!--googlefont toevoegen-->
+       <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -60,7 +62,7 @@
 
     <div class="container content">
         <header>
-                    <h2>Preventie tegen virussen </h2>
+                    <h1>Preventie tegen virussen </h1>
                     <p>Na uren zwoegen om dat ene irritante virus van je computer te verwijderen, wens je dat je dat nooit meer moet doen. Hiervoor kan je zelf zorgen. Neen, je moet geen honderden muntjes in één of andere Italiaanse fontein gooien om ervoor te zorgen dat deze wens uitkomt. In tegendeel, je kan je een hoop ellende besparen door onderstaande raadgevingen te volgen en je computer virus vrij te houden. </p>
                 </header>
         <article>
@@ -93,11 +95,16 @@
             <section class="row">
                 <aside class="hidden-sm-down col-md-6 col-lg-5 ">
                     <figure class="canva">
-                        <canvas id="myCanvas" width="200" height="200"></canvas>
+                        <canvas id="Canvas" width="200" height="200"></canvas>
+                        <div>
+                        <button id="wissen">wissen</button>
+                        <button id="tekenen" >tekenen</button>
+                        
+                        </div>
                     </figure>
                 </aside>
                 <div class="col-md-6 col-lg-7">
-                    <h2>Mails</h2>
+                    <h2 id="tekenen">Mails</h2>
                     <p>Je heb het vast al eens gehoord. Open nooit een bijlage van een onbekend mailadres. Hiervoor is ook een reden. Deze bijlage kunnen namelijk virussen en andere schadelijke programma’s bevatten. Deze virussen zitten goed verstopt in de bijlage. Zodra je ze opendoet, boem!, een virus heeft zich genesteld in jouw computersysteem. Door deze ene klik is al je geleverde werk om je computer op te ruimen voor niets geweest. Deze methode om virussen te verspreiden wordt heel vaak gebruikt en je moet er dus goed voor oppassen. Ken je het emailadres niet, open de mail dan niet. Verwacht je geen bijlage meegestuurd in een mail, open dan zeker niet de bijlage in je inbox. Open dus alleen mails en bijlagen die je vertrouwt. </p>
                 </div>
             </section>
@@ -147,12 +154,7 @@
     <!-- Custom javascript -->
     <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256
     -laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
-    <script>
-        < script >
-            var canvas = document.getElementById("myCanvas");
-        var ctx = canvas.getContext("2d");
 
-    </script>
 
     <script>
 //        script voor kleurverandering
@@ -181,7 +183,7 @@
                 }
 
             });
-        })();
+        });
 
         function kleurregelen() {
             var kleur = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
@@ -192,30 +194,25 @@
 
    <script>
 //       script voor canvas
-		$(document).ready(
-			function() {
-			 Tekenen();
-			}
-		);
-	
-       function canvasWissen() {
-				var $mijnCanvas = $('#mijnCanvas')[0];
-				var context = $mijnCanvas.getContext("2d");
-
-				context.clearRect(0, 0, $mijnCanvas.width, $mijnCanvas.height);
-			}
+		$(document).ready( function() { 
+            $("#tekenen").on("click",Tekenen); 
+            $("#wissen").on("click",wissen); 
+        } );
+       
+      
 	
 		function Tekenen() {
-			
-			var $mijnCanvas=$("#myCanvas")[0];
-			var context=$mijnCanvas.getContext("2d");
+            alert("hoi")
+			var mijnCanvas=$("#Canvas")[0];
+			var context=mijnCanvas.getContext("2d");
 			var x=20;
 			var y=80;
 			var breedte=160;
 			var hoogte=80;
             var stap=10;
-			
+			var startx=40;
 			//ruit
+            alert ("lala")
 			var ruit=new Path2D();
 			ruit.moveTo(x,y);
 			ruit.lineTo(x+breedte/2,y-hoogte/2);
@@ -229,43 +226,11 @@
 			//rechthoek
 			var blad= new Path2D();
 			blad.rect(x+20, y-20, breedte-40, hoogte);
-			context.fillStyle="#53B4FF";
+			context.fillStyle="#D8DEFF";
 			context.fill(blad);
             
-//			//virus invader werkt niet
-//            var virus=new Path2D();
-//            virus.moveTo(x+30,y);
-//            virus.lineTo(x+30+2*stap,y);
-//            virus.lineto(x+30+2*stap,y-stap);
-//            virus.lineTo(x+30+6*stap,y-stap);
-//            virus.lineTo(x+30+6*stap,y);
-//            virus.lineTo(x+30+8*stap,y);
-//            virus.lineTo(x+30+8*stap,y+4*step);
-//            virus.lineTo(x+30+7*stap,y+4*step);
-//            virus.lineTo(x+30+7*stap,y+5*step);
-//            virus.lineTo(x+30+8*stap,y+5*step);
-//            virus.lineTo(x+30+8*stap,y+6*step);
-//            virus.lineTo(x+30+6*stap,y+6*step);
-//            virus.lineTo(x+30+6*stap,y+5*step);
-//            virus.lineTo(x+30+5*stap,y+5*step);
-//            virus.lineTo(x+30+5*stap,y+4*step);
-//            virus.lineTo(x+30+3*stap,y+4*step);
-//            virus.lineTo(x+30+3*stap,y+5*step);
-//            virus.lineTo(x+30+2*stap,y+5*step);
-//            virus.lineTo(x+30+2*stap,y+6*step);
-//            virus.lineTo(x+30+0*stap,y+6*step);
-//            virus.lineTo(x+30+0*stap,y+5*step);
-//            virus.lineTo(x+30+1*stap,y+5*step);
-//            virus.lineTo(x+30+1*stap,y+4*step);
-//            virus.lineTo(x+30+0*stap,y+4*step);
-//            virus.closePath();
-//            context.fillStyle="AFC7FF";
-//            context.fill(virus);
-                
-                    
-            
-            
-//            voorkant envalope
+                   
+            // voorkant envalope
             var voorkant=new Path2D();
             voorkant.moveTo(x,y);
             voorkant.lineTo(x+breedte/2,y+hoogte/2);
@@ -275,9 +240,65 @@
             voorkant.closePath();
             context.fillStyle="#F0E3D7";
             context.fill(voorkant);
+            
+            alert("virus")
+			//virus invader werkt niet
+            var virus=new Path2D();
+            virus.moveTo(x+startx, y);
+            virus.lineTo(x+startx+20, y);
+            virus.lineTo(x+startx+20, y-10);
+            virus.lineTo(x+startx+60, y-10);
+            virus.lineTo(x+startx+60, y);
+            virus.lineTo(x+startx+80, y);
+            virus.lineTo(x+startx+80, y+40);
+            virus.lineTo(x+startx+70, y+40);
+            virus.lineTo(x+startx+70, y+50);
+            virus.lineTo(x+startx+80, y+50);
+            virus.lineTo(x+startx+80, y+60);
+            virus.lineTo(x+startx+60, y+60);
+            virus.lineTo(x+startx+60, y+50);
+            virus.lineTo(x+startx+50, y+50);
+            virus.lineTo(x+startx+50, y+40);
+            virus.lineTo(x+startx+30, y+40);
+            virus.lineTo(x+startx+30, y+50);
+            virus.lineTo(x+startx+20, y+50);
+            virus.lineTo(x+startx+20, y+60);
+            virus.lineTo(x+startx, y+60);
+            virus.lineTo(x+startx, y+50);
+            virus.lineTo(x+startx+10, y+50);
+            virus.lineTo(x+startx+10, y+40);
+            virus.lineTo(x+startx, y+40);
+            virus.closePath();
+            context.fillStyle="#31B815";
+            context.fill(virus);
+            
+            
+            var oog =new Path2D();
+            oog.moveTo(x+startx +10, y+10);
+            oog.lineTo(x+startx+30, y+10);
+            oog.lineTo(x+startx+30, y +20);
+            oog.lineTo(x+startx+10, y+20);
+            oog.closePath();
+            context.fillStyle="#F5EA1E";
+            context.fill(oog);
+            
+            var oog2 =new Path2D();
+            oog2.moveTo(x+startx +10+40, y+10);
+            oog2.lineTo(x+startx+30+40, y+10);
+            oog2.lineTo(x+startx+30+40, y +20);
+            oog2.lineTo(x+startx+10+40, y+20);
+            oog2.closePath();
+            context.fillStyle="#F5EA1E";
+            context.fill(oog2);
 			
 			
 		}
+        function wissen() {
+           alert ("wissen")
+           var element=$("#Canvas")[0];
+			var context=element.getContext("2d");
+                context.clearRect(0, 0, element.width,element.height);
+			};
     </script>
     <script type="text/javascript">
 //        script voor navbalk
