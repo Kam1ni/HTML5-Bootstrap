@@ -116,14 +116,14 @@
                     <figure>
                         <div class="browsers">
                             <div>
-                                <i class="fa fa-chrome logo logo1 " id="lala" aria-hidden="true"></i>
-                                <i class="fa fa-firefox logo logo2 " aria-hidden="true"></i>
+                                <i class="fa fa-chrome logo  " id="lala" aria-hidden="true"></i>
+                                <i class="fa fa-firefox logo  " aria-hidden="true"></i>
                                 <i class="fa fa-internet-explorer logo " aria-hidden="true"></i>
                             </div>
                             <div>
-                                <i class="fa fa-edge logo logo4 " aria-hidden="true"></i>
-                                <i class="fa fa-opera logo logo5 " aria-hidden="true"></i>
-                                <i class="fa fa-safari logo logo6 " aria-hidden="true"></i>
+                                <i class="fa fa-edge logo  " aria-hidden="true"></i>
+                                <i class="fa fa-opera logo " aria-hidden="true"></i>
+                                <i class="fa fa-safari logo  " aria-hidden="true"></i>
                             </div>
                         </div>
                         <figcaption>Browsers</figcaption>
@@ -132,7 +132,7 @@
                 </aside>
             </section>
         </article>
-        <footer>
+        <footer class="col-md-12 col-lg-12 col-xs-12 col-sm-12 col-xl-12">
             <div>
                 <a class="tm col-md-4" href="http://www.thomasmore.be/">thomas more</a>
                 <p class="col-md-4">author: Laura De Groof</p>
@@ -179,7 +179,12 @@
                 if (count == 20) {
                     alert("ik heb je gewaarschuwt, nu het is gedaan");
                     $(".logo").css("color", '#ffffff');
-                    rommel();
+                    
+                }
+                if (count == 22) {
+                    alert("je geeft niet op he?");
+                    $(".logo").css("color", '#ffffff');
+                    
                 }
 
             });
@@ -187,6 +192,7 @@
 
         function kleurregelen() {
             var kleur = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+            $(".logo").css("color", kleur);
         }
         
      
