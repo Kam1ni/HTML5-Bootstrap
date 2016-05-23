@@ -26,11 +26,14 @@
 @-webkit-keyframes spaceInvader{
     0% {
         left:0px;
+        transform: rotate(25deg);
     }
     50% {left:700px;
+        transform: rotate(300deg);
     }
     100% {
         left:0px;
+        transform: rotate(25deg);
     }
 }
 
