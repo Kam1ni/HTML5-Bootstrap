@@ -6260,6 +6260,9 @@ footer div * {
 footer a {
   color: white;
 }
+footer a:visited {
+  color: white;
+}
 footer a:hover {
   color: white;
 }

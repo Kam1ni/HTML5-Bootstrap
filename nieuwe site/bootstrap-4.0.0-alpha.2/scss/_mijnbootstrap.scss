@@ -272,9 +272,15 @@ footer{
     a{
         color: white;  
         
+        &:visited{
+            color: white;
+        }
+        
         &:hover{
             color: white;
         }
+        
+        
         
     }
     
