@@ -70,13 +70,12 @@
         </header>
    
     <section class="row">
-        <aside class="hidden-sm-down col-md-5">
+        <aside class="hidden-sm-down col-md-6 col-lg-5">
             <figure>
-                <img src="advies.jpg" alt="advies" height="100" width="100" />
-                <figcaption>advies nodig?</figcaption>
+               <img src="img/programmainstaleren.jpg" height="100%" width="100%" />
             </figure>
         </aside>
-        <div class="col-md-7">
+        <div class="col-md-6 col-lg-7">
             <h2>Programma’s installeren</h2>
             <p> Voor de meeste mensen is een programma installeren zoiets als “klik volgende , klik volgende , klik accepteren ,klik installeren en klik voltooien”. Maar het is belangrijk dat je alle pagina’s van het installatieproces leest. Bij sommige programma’s vragen ze of je bepaalde software erbij wilt installeren. Dikwijls is deze software niet nodig voor het uitvoeren van je programma en neemt het alleen maar geheugen in beslag. Let dus goed op dat je niet zomaar op “volgende” klikt en lees eerst goed wat er in het venster staat. Dit geld ook voor de gebruiksvoorwaarden. Je kent ze wel , de lange teksten die je zomaar accepteert zonder ze te lezen. Meestal staat hier heel belangrijke informatie in: zoals wat je met het programma mag doen en misschien nog belangrijker, wat het programma met je persoonlijke gegevens doet. Als je de gebruiksvoorwaarden niet leest kan je het programma de toestemming geven om je persoonlijke gegevens te verkopen. Let hier goed voor op. </p>
         </div>
@@ -84,11 +83,11 @@
 
     <section class="row">
         
-        <div class="col-md-7">
+        <div class="col-md-6 col-lg-7">
             <h2>Back-ups maken</h2>
             <p>Stel, je bent al dagen bezig met een project op jouw computer en plots crasht je harde schijf. Geen back-up?, jammer . Al je bestanden zijn weg en al het werk is voor niets geweest. Zie je een back-up maken is zeker de moeite waard. In Windows zijn er bepaalde tools die je hierbij kunnen helpen. De manier van een back-up maken hangt af van de Windows versie. Meestal kan je beginnen met het zoeken naar deze back-up tool in het configuratiescherm bij systeem.</p>
         </div>
-        <aside class="hidden-sm-down col-md-5">
+        <aside class="hidden-sm-down col-md-6 col-lg-5">
             <figure class="backup">
                 <i class="fa fa-floppy-o " aria-hidden="true"></i>
                 <figcaption>advies nodig?</figcaption>
@@ -96,22 +95,24 @@
         </aside>
     </section>
     <section class="row">
-        <aside class="hidden-sm-down col-md-5">
-           <p>De onderstaande video laat zien hoe je je schijf kan laten defragmenteren in Windows 8. je kunt uw schijf defragmenteren door in het startmenu naar defragmenteren te zoeken. je kunt dan het defrag venster openen en kiezen welke schijf je wilt defragmentenren. daarna kunt u op de defragmenteren knop drukken. deze video heeft geen geluid</p>
-            <video width="100%" height=100% controls>
+        <aside class="hidden-sm-down col-md-6 col-lg-5 defrag">
+           <p>De onderstaande video laat zien hoe je je schijf kan laten defragmenteren in Windows 8.  deze video heeft geen geluid.</p>
+            <video id="video" width="100%" height=100% controls poster="img/poster.jpg">
                 <source src="video/defrag.mp4"  type="video/mp4"/>
                 <source src="video/defrag.ogv" type="video/ogv"/>
                 <source src="video/defrag.webm" type="video/webm"/>
                 browser ondersteunt geen videotag
             </video>
+            <p class="uitleg">je kunt uw schijf defragmenteren door in het startmenu naar defragmenteren te zoeken. je kunt dan het defrag venster openen en kiezen welke schijf je wilt defragmentenren. daarna kunt u op de defragmenteren knop drukken.</p>
         </aside>
-        <div class="class= col-md-7">
+        <div class="col-md-6 col-lg-7">
             <h2>Defragmenteren</h2>
             <p>Door het jarenlange gebruik zit je computer vol met documenten. Zo vol dat de snelheid van je computer afneemt. Dit is heel normaal. Hoe voller je harde schijf , hoe moeilijker het is voor uw computer om de juiste files te vinden. Dit zorgt voor een vertraging. De oplossing voor dit probleem is defragmentatie. Je kunt dit proces vergelijken met het opruimen van een kast. Als je niet ordelijk bent is deze kast een grote rommelboel. Spullen die bij elkaar horen liggen verspreid in de kast en het duurt lang voor je iets gevonden hebt. Je harde schijf is hetzelfde. Het verspreidt je bestanden willekeurig over de harde schijf en moet dus veel moeite doen om deze bestanden te vinden. Als we de kast nu opruimen en alle dingen die bij elkaar horen bij elkaar leggen, dan is het makkelijker om al je spullen terug te vinden. Defragmentatie doet hetzelfde. Bij defragmentatie ze de computer alle bijbehorende data samen. Dit maakt het voor de computer gemakkelijk om bijvoorbeeld een foto snel op je scherm te toveren. Ik moet er wel bij zeggen dat defragmenteren enkel met Hdd schijf mag en niet met ssd opslag. Ssd is een duurdere en snellere harde schijf die geen gebruik maakt van verschillende schijven om data op te slaan. De data is direct beschikbaar en moet dus niet gezocht worden. Defragmentatie zorgt er enkel voor dat je ssd sneller stuk gaat.
             </p>
             
        
         </div>
+        
     </section>
 
         <footer>
@@ -157,5 +158,17 @@
                 });
         })
     </script>
+    <!-- script voor tonen van uitleg bij afspelen video-->
+    <script>
+        $(document).ready( function() { 
+            $("#video").on("click",tonen); 
+        });
+        function tonen(){
+            $('#video').get(0).play();  
+            $(".uitleg").css("display",'block');
+        }
+                        
+    </script>
+   
   </body>
 </html>
