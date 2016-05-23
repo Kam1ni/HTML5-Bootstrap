@@ -1,7 +1,12 @@
-video {
-  width: 100%; }
+video{
+    width:100%;
+}
 
-figure img {
-  width: 100%; }
+figure img{
+    width:100%;
+}
 
+.verstopt{
+    display: none;
+}
 /*# sourceMappingURL=kamil.css.map */

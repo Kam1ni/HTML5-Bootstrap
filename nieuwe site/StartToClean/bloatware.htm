@@ -12,7 +12,7 @@
     
     <!-- Bootstrap core CSS -->
     <link href="css/mijnbootstrap.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="css/kamil.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     
@@ -80,20 +80,21 @@
             
             <div class="row">
             <section class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
-                <h2>Voorkomen</h2>
+                <h2 id="bloatwaretitel">Voorkomen</h2>
                 <p id="voorkomen">Er zijn fabrikanten die bloatwareloze toestellen verkopen, maar daar ben je nooit 100% zeker over. Als je een Windows pc wilt, dan kan je die zelf in elkaar steken. Dan ben je heel zeker dat er geen bloatware op zit. Maar als je niet weet hoe je een computer in elkaar moet steken dan kan je een gokje wagen bij een fabrikant met een goede naam op het vlak van bloatware. Bij smartphones is het iets moeilijker. Die kan je moeilijk zelf in elkaar steken. Er zijn weinig smartphones die een volledige stock Android ervaring geven. Als je een stock Android ervaring wilt, probeer dan goedkope merken te voorkomen. De duurdere merken hebben meestal op dat vlak een betere keuze dan de rest.</p>
-                </section>
+            </section>
+
             <figure class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 hidden-md-down">
                 <canvas width="300" height="400" id="android"></canvas>
                 <figcaption>Android robot</figcaption>
             </figure>
+            <aside class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">Meeste bedrijven die hun besturings systeem zelf maken hebben geen bloatware</aside>
             </div>
             
-            <aside>Meeste bedrijven die hun besturings systeem zelf maken hebben geen bloatware</aside>
         </article>
 
 
-    <footer>
+    <footer class="col-md-12 col-lg-12 col-xs-12 col-sm-12 col-xl-12">
         <div>
         <a class="tm col-md-4" href="http://www.thomasmore.be/">thomas more</a>
         <p class="col-md-4">author: Kamil Kulach</p>
@@ -116,26 +117,26 @@
             //mobile nav button extend & collapse
             $("#nav-btn").on("click", navKnop);
             android();
+            $("#bloatwaretitel").on("click", canvasVerbergen);
         });
      
         function navKnop(){
-            
-                if ($("#nav").hasClass("hidden")){
-                    $("#nav").removeClass("hidden").addClass("extending");
-                    $("#nav-btn").addClass("active");
-                    setTimeout(function(){
-                        $("#nav").removeClass("extending").addClass("shown");
-                        $("#nav-btn").removeClass("active");
-                    }, 250);
-                }
-                else if ($("#nav").hasClass("shown")){
-                    $("#nav").removeClass("shown").addClass("collapsing");
-                    $("#nav-btn").addClass("active");
-                    setTimeout(function(){
-                        $("#nav").removeClass("collapsing").addClass("hidden");
-                        $("#nav-btn").removeClass("active");
-                    }, 250);
-                }
+            if ($("#nav").hasClass("hidden")){
+                $("#nav").removeClass("hidden").addClass("extending");
+                $("#nav-btn").addClass("active");
+                setTimeout(function(){
+                    $("#nav").removeClass("extending").addClass("shown");
+                    $("#nav-btn").removeClass("active");
+                }, 250);
+            }
+            else if ($("#nav").hasClass("shown")){
+                $("#nav").removeClass("shown").addClass("collapsing");
+                $("#nav-btn").addClass("active");
+                setTimeout(function(){
+                    $("#nav").removeClass("collapsing").addClass("hidden");
+                    $("#nav-btn").removeClass("active");
+                }, 250);
+            }
         };
      
         function android()
@@ -174,14 +175,13 @@
             context.strokeStyle = kleur;
             
             
-            //linker been
-            context.moveTo(breedte/2 - bodyBreedte/2 + bodyBreedte / 4, hoogte/3 + bodyHoogte / 40 + bodyBreedte);
-            context.lineTo(breedte/2 - bodyBreedte/2 + bodyBreedte / 4, hoogte/3 + bodyBreedte + bodyBreedte /1.75);
-            context.stroke();
-            
-            //rechter been
-            context.moveTo(breedte/2 - bodyBreedte/2 + bodyBreedte / 4 + bodyBreedte / 2, hoogte/3 + bodyHoogte / 40 + bodyBreedte);
-            context.lineTo(breedte/2 - bodyBreedte/2 + bodyBreedte / 4 + bodyBreedte / 2, hoogte/3 + bodyBreedte + bodyBreedte /1.75);
+            for (var i = 0; i < 2; i++)
+            {
+                //benen
+                context.moveTo(breedte/2 - bodyBreedte/2 + bodyBreedte / 4 + (i* (bodyBreedte / 2)), hoogte/3 + bodyHoogte / 40 + bodyBreedte);
+                context.lineTo(breedte/2 - bodyBreedte/2 + bodyBreedte / 4 + (i* (bodyBreedte / 2)), hoogte/3 + bodyBreedte + bodyBreedte /1.75);
+                context.stroke();
+            }
             
             //linker arm
             context.moveTo(breedte/2 - bodyBreedte/2 - bodyHoogte / 40 - armBeenBreedte/2, hoogte/3 + armBeenBreedte / 2);
@@ -207,8 +207,18 @@
             context.arc(breedte/4 + breedte /7, hoogte/3 - bodyBreedte/4, bodyBreedte/20, 0, 2*Math.PI);
             context.arc(breedte - (breedte/4 + breedte /7), hoogte/3 - bodyBreedte/4, bodyBreedte/20, 0, 2*Math.PI);
             context.fill();
-        
+        }
             
+        function canvasVerbergen()
+        {
+            if ($("canvas").hasClass("verstopt"))
+            {
+                $("canvas").removeClass("verstopt");
+            }
+            else
+            {
+                $("canvas").addClass("verstopt");
+            }
         }
     </script>
   </body>
