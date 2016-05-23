@@ -74,12 +74,16 @@
                 
                 <article>
                 <section class="col-md-12">
+                
+                <img src="img/New%20Piskel.png" width="80px" alt=" bewegende space invader" class="animatie hidden-xs-down hidden-sm-down hidden md-down">
 
                 <h2 id="installatiemedia">Aanmaken van installatiemedia</h2>
 
                 <p>Indien je geen installatie cd's hebt dan zul je eerst installatie media moeten aanmaken.</p>
                 
                 </section>
+                
+                
                 
                 <section class="col-md-8 extend">
 
@@ -99,6 +103,18 @@
                    <canvas width="200" height="400" id="tekening2">
                        
                    </canvas>
+                    
+                    
+                </section>
+                
+                <section class="col-md-12 hidden-xs-down">
+                   
+                   <video height="480" width="880" controls> Video tag niet gesupport door uw browser of device
+                       <source src="video/VideoRufusWeb.mp4" type="video/mp4">
+                       <source src="video/VideoRufusWeb.ogv" type="video/ogv">
+                       <source src="video/VideoRufusWeb.webm" type="video/webm">
+                   </video>
+                    
                     
                     
                 </section>
@@ -136,7 +152,14 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
-
+    
+    <!--CDN link for  TweenMax-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script> 
+        window.onload = function(){
+            TweenMax.from("#tekening1",2,{opacity:0,scale:0,ease:Bounce.easeOut});
+        }
+    </script>
 
     <!-- Custom javascript -->
     <script type="text/javascript">
@@ -144,6 +167,13 @@
             function() {
                 tekenen();
                 //mobile nav button extend & collapse
+                $(".tm").on("click",function(exit){
+                    var r=confirm("Wilt u de site verlaten?");
+            
+                    if(r == false){
+                        exit.preventDefault();
+                    }
+                });
                 $("#nav-btn").click(
                     function() {
                         if ($("#nav").hasClass("hidden")) {
@@ -171,11 +201,13 @@
                 $("#tekening1").removeClass("verborgen");
                 $(".extend").removeClass("col-md-12");
                 $(".extend").addClass("col-md-8");
+                TweenMax.from("#tekening1",2,{opacity:0,scale:0,ease:Power0.easeOut});
             }
             else{
                 $(".extend").addClass("col-md-12");
                 $(".extend").removeClass("col-md-8");
-                $("#tekening1").addClass("verborgen");
+                $("#tekening1").addClass("verborgen");              
+                
                 }
         }
         
@@ -211,6 +243,8 @@
                
             }
     </script>
+    
+    
 </body>
 
 </html>
