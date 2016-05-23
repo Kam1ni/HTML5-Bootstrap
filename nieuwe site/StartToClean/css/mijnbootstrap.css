@@ -9,6 +9,7 @@ invulling pagina bleu: #E3F2FD
 bruin: #F4A55E
 donker bruin:#C04307 
 */
+/*$licht-blauw:               #E3F2FD !default;*/
 /*
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;*/
@@ -6112,7 +6113,7 @@ header {
   padding-top: 0px;
   padding-bottom: 70px;
   padding: 70px 60px;
-  background-color: #E3F2FD;
+  background-color: #a0d3f8;
   color: black;
   -webkit-border-bottom-right-radius: 50px;
   -webkit-border-bottom-left-radius: 50px;
@@ -6128,7 +6129,7 @@ header header h1 {
 
 footer {
   margin: 0px;
-  background-color: #84c6f6;
+  background-color: #41a7f1;
   padding: 20px;
   -webkit-border-bottom-right-radius: 30px;
   -webkit-border-bottom-left-radius: 30px;
@@ -6146,6 +6147,12 @@ footer div * {
   padding: 10px;
   line-height: 10px;
 }
+footer a {
+  color: white;
+}
+footer a:hover {
+  color: white;
+}
 
 h1 {
   font-family: 'Oswald', sans-serif;
@@ -6159,3 +6166,5 @@ h1 {
     margin-right: auto;
   }
 }
+
+/*# sourceMappingURL=mijnbootstrap.css.map */
