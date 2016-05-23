@@ -4,8 +4,6 @@ $margin-top-titel:45px;
 //    background-image: url(../StartToClean/img/headerlaura.jpg);
 //    background-repeat: no-repeat;
 //    background-size: cover;
-
-
 //draaien iconen browsers
 .browsers {
     align-content: center;
@@ -31,12 +29,11 @@ $margin-top-titel:45px;
         text-align: center;
         padding: 10px;
     }
-    div{
+    div {
         text-align: center;
-    
     }
 }
-figcaption{
+figcaption {
     text-align: center;
 }
 @keyframes draaien {
@@ -44,26 +41,22 @@ figcaption{
         transform: rotate(360deg);
     }
 }
-
 //canvas
-
-.canva{
+.canva {
     text-align: center;
 }
 canvas {
-    border: 2px solid #84c6f6 ;
+    border: 2px solid #84c6f6;
     -webkit-border-radius: 10%;
     -moz-border-radius: 10%;
     border-radius: 10%;
 }
-
-
 //transition vinkje en kruisje
 .tekening {
     text-align: center;
     position: relative;
     color: white;
-    margin-right:auto;
+    margin-right: auto;
     margin-left: auto;
     background-color: green;
     -webkit-border-radius: 50%;
@@ -72,17 +65,15 @@ canvas {
     height: 200px;
     width: 200px;
     background-color: green;
-    -webkit-transition:border-radius 2s,background-color 2s,transform 2s;
-    transition: border-radius 2s, background-color 2s,transform 2s;
-    i{
-       position: absolute;
-       top: 50%;
-       left: 50%;
-        transform: translate(-50%,-50%);
+    -webkit-transition: border-radius 2s, background-color 2s, transform 2s;
+    transition: border-radius 2s, background-color 2s, transform 2s;
+    i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
-
-
 //verandering van icoon
 .tekening .fa-times,
 .tekening:hover .fa-check {
@@ -98,33 +89,46 @@ canvas {
     background-color: red;
     transform: rotate(360deg);
 }
-
 //opslaan
-.backup{
+.backup {
     text-align: center;
-    i{
+    i {
         font-size: 8em;
     }
 }
-
-
 //defragmenteren video
-.defrag{
+.defrag {
     margin-top: $margin-top-titel;
-    p{font-size: 0.9em}
+    p {
+        font-size: 0.9em
+    }
 }
-
-aside{
+aside {
     margin-top: $margin-top-titel;
 }
-.uitleg{
+.uitleg {
     display: none;
 }
-.update{
+#update {
     text-align: center;
-    i{
+    i {
         font-size: 8em;
         color: green;
         background-color: inherit;
     }
 }
+.foto {
+    margin-left: auto;
+    margin-right: auto;
+    height: 204px;
+    width: 300px;
+    background-image: linear-gradient(to bottom right, darken($lightblauw, 60%), #aaa ),url(../../StartToClean/img/programmainstaleren.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+   
+}
+ .foto:hover{
+      background-image: linear-gradient(to bottom right,#aaa ,darken($lightblauw, 50%) ),url(../../StartToClean/img/programmainstaleren.jpg); 
+         background-blend-mode: overlay;
+    }
