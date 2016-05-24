@@ -126,9 +126,13 @@ aside {
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: overlay;
+    
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius:10px;
    
 }
  .foto:hover{
-      background-image: linear-gradient(to bottom right,#aaa ,darken($lightblauw, 50%) ),url(../../StartToClean/img/programmainstaleren.jpg); 
-         background-blend-mode: overlay;
+      background-image: linear-gradient(to bottom right, darken($lightblauw, 60%), #aaa ),url(../../StartToClean/img/programmainstaleren.jpg); 
+         background-blend-mode: screen;
     }
