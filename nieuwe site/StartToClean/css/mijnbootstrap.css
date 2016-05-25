@@ -6070,6 +6070,10 @@ a.bg-danger:focus, a.bg-danger:hover {
     margin-top: 50px;
   }
 }
+svg {
+  margin-bottom: 20px;
+}
+
 section {
   background-color: inherit;
   color: black;
