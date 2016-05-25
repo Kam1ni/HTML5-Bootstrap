@@ -47,7 +47,7 @@
         <li class="nav-item">
             <a class="nav-link" href="Verwijderen_malware.htm">Verwijderen Malware</a>
         </li>
-        <li class="nav-item">0/*
+        <li class="nav-item">
             <a class="nav-link" href="last_resort.htm">Last resort</a>
         </li>
         <li class="nav-item">
@@ -70,10 +70,10 @@
         </header>
    
     <section class="row">
-        <aside class="hidden-sm-down col-md-6 col-lg-5">
-            <figure>
-               <img src="img/programmainstaleren.jpg" height="100%" width="100%" />
-            </figure>
+        <aside class="hidden-sm-down col-md-6 col-lg-5 ">
+            <div class="foto">
+                
+            </div>
         </aside>
         <div class="col-md-6 col-lg-7">
             <h2>Programma’s installeren</h2>
@@ -89,8 +89,8 @@
         </div>
         <aside class="hidden-sm-down col-md-6 col-lg-5">
             <figure class="backup">
-                <i class="fa fa-floppy-o " aria-hidden="true"></i>
-                <figcaption>advies nodig?</figcaption>
+                <i class="fa fa-floppy-o logo " aria-hidden="true"></i>
+                
             </figure>
         </aside>
     </section>
@@ -169,7 +169,49 @@
         }
                         
     </script>
-    
+    <script>
+//        script voor kleurverandering
+        $(document).ready(function() {
+            var count = 0;
+
+            $('.logo').click(function() {
+                count += 1;
+                kleurregelen();
+
+                if (count == 3) {
+                    alert("Vergeet geen backups te maken");
+                }
+                if (count == 10) {
+                    alert("Je goed humuer hant hier vanaf");
+                }
+                if (count == 15) {
+                    alert("Ik denk dat je niet zomaar op alles moet klikken");
+                }
+                if (count == 19) {
+                    alert("laatste waarschuwing");
+                }
+                if (count == 20) {
+                    alert("ik heb je gewaarschuwt, nu het is gedaan");
+                    $(".logo").css("color", '#ffffff');
+                    
+                }
+                if (count == 22) {
+                    alert("je geeft niet op he?");
+                    $(".logo").css("color", '#ffffff');
+                    
+                }
+
+            });
+        });
+
+        function kleurregelen() {
+            var kleur = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+            $(".logo").css("color", kleur);
+        }
+        
+     
+       
+    </script>
    
   </body>
 </html>

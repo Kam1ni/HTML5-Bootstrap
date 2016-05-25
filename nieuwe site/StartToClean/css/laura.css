@@ -60,8 +60,8 @@ canvas {
   height: 200px;
   width: 200px;
   background-color: green;
-  -webkit-transition: border-radius 2s,background-color 2s,transform 2s;
-  transition: border-radius 2s, background-color 2s,transform 2s;
+  -webkit-transition: border-radius 2s, background-color 2s, transform 2s;
+  transition: border-radius 2s, background-color 2s, transform 2s;
 }
 .tekening i {
   position: absolute;
@@ -109,11 +109,30 @@ aside {
   display: none;
 }
 
-.update {
+#update {
   text-align: center;
 }
-.update i {
+#update i {
   font-size: 8em;
   color: green;
   background-color: inherit;
+}
+
+.foto {
+  margin-left: auto;
+  margin-right: auto;
+  height: 204px;
+  width: 300px;
+  background-image: linear-gradient(to bottom right, #0c63a2, #aaa), url(../../StartToClean/img/programmainstaleren.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.foto:hover {
+  background-image: linear-gradient(to bottom right, #0c63a2, #aaa), url(../../StartToClean/img/programmainstaleren.jpg);
+  background-blend-mode: screen;
 }
