@@ -86,7 +86,7 @@
                     <p> Je kent het wel, je sluit je computer af (of je start hem op) en er verschijnt op het scherm de boodschap, “Windows update sluit je computer niet af”. Dit komt op het meest ongelegen moment en lijkt dan ook nog eens een eeuwigheid te duren (vooral Windows gebruikers weten waar ik het over heb). Heel irritant! Toch stel je beter deze updates niet uit. Ze zijn nodig om ervoor te zorgen dat alle achterpoortjes van het systeem gesloten blijven. Het is dus heel belangrijk dat je je systeem goed up-to-date houdt. </p>
                 </div>
                 <aside class="hidden-sm-down col-md-6 col-lg-5">
-                    <figure class="update">
+                    <figure id="update">
                         <i class="fa fa-arrow-down" aria-hidden="true"></i>
                     </figure>
                 </aside>
@@ -197,6 +197,34 @@
         
      
        
+    </script>
+        
+    <script>
+        $(document).ready(function() {
+            var hoek=0;
+            var updatcount =0;
+            
+            $("#update").on("click",function(){
+                updatcount += 1
+                hoek += 45;
+                $("#update").css("transform","rotate("+hoek+"deg)");
+               
+                if (updatcount == 3) {
+                    alert("het draait!!!!");
+                }
+                if (updatcount == 8) {
+                    alert("je hebt hem terug gezet, supper!!!!");
+                }
+                if (updatcount == 9) {
+                    alert("echt je gaat hem nog eens laten ronddraaien?");
+                }
+                if (updatcount == 16) {
+                    alert("klik je altijd op banners en fotos, meschien zit er een virus achter. jeweet maar nooit!");
+                }
+                
+            });
+            
+        });
     </script>
 
    <script>
