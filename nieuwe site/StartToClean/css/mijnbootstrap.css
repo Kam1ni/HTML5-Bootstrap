@@ -6070,6 +6070,10 @@ a.bg-danger:focus, a.bg-danger:hover {
     margin-top: 50px;
   }
 }
+svg {
+  margin-bottom: 20px;
+}
+
 section {
   background-color: inherit;
   color: black;
@@ -6169,5 +6173,3 @@ h1 {
     margin-right: auto;
   }
 }
-
-/*# sourceMappingURL=mijnbootstrap.css.map */
